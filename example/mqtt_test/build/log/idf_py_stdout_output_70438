@@ -1,0 +1,1323 @@
+[0;32mI (117) esp_image: segment 1: paddr=00035400 vaddr=3fc910ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4005880e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 21 2025 15:58:13[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=3c0b0020 size=253d8h (152536) map[0m
+[0;32mI (117) esp_image: segment 1: paddr=00035400 vaddr=3fc91000 size=02b60h ( 11104) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=00037f68 vaddr=40380000 size=080b0h ( 32944) load[0m
+[0;32mI (128) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=aa914h (698644) map[0m
+[0;32mI (240) esp_image: segment 4: paddr=000ea93c vaddr=403880b0 size=08ef8h ( 36600) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (253) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Unicore app[0m
+[0;32mI (273) cpu_start: Pro cpu start user code[0m
+[0;32mI (273) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (273) cpu_start: Application information:[0m
+[0;32mI (276) cpu_start: Project name:     mqtt_test[0m
+[0;32mI (281) cpu_start: App version:      1[0m
+[0;32mI (285) cpu_start: Compile time:     Oct 21 2025 15:58:09[0m
+[0;32mI (291) cpu_start: ELF file SHA256:  7e43acac9...[0m
+[0;32mI (297) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (302) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (306) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (311) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (316) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (323) heap_init: At 3FC982C0 len 00027D40 (159 KiB): RAM[0m
+[0;32mI (329) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (336) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (343) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (350) spi_flash: detected chip: generic[0m
+[0;32mI (354) spi_flash: flash io: dio[0m
+[0;33mW (358) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (372) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (378) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (385) main_task: Started on CPU0[0m
+[0;32mI (385) main_task: Calling app_main()[0m
+[0;32mI (395) pp: pp rom version: 9387209[0m
+[0;32mI (395) net80211: net80211 rom version: 9387209[0m
+[0;32mI (405) wifi:wifi driver task: 3fca0e48, prio:23, stack:6656, core=0[0m
+[0;32mI (405) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (405) wifi:wifi certification version: v7.0[0m
+[0;32mI (415) wifi:config NVS flash: enabled[0m
+[0;32mI (415) wifi:config nano formating: disabled[0m
+[0;32mI (415) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (425) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (425) wifi:Init management short buffer num: 32[0m
+[0;32mI (435) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (435) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (445) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (445) wifi:Init static rx buffer num: 10[0m
+[0;32mI (445) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (455) wifi_init: rx ba win: 6[0m
+[0;32mI (455) wifi_init: tcpip mbox: 32[0m
+[0;32mI (465) wifi_init: udp mbox: 6[0m
+[0;32mI (465) wifi_init: tcp mbox: 6[0m
+[0;32mI (465) wifi_init: tcp tx win: 5760[0m
+[0;32mI (475) wifi_init: tcp rx win: 5760[0m
+[0;32mI (475) wifi_init: tcp mss: 1440[0m
+[0;32mI (475) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (485) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (495) phy_init: phy_version 1130,b4e4b80,Sep  5 2023,11:09:30[0m
+[0;32mI (535) wifi:mode : sta (90:e5:b1:47:21:64)[0m
+[0;32mI (535) wifi:enable tsf[0m
+[0;32mI (545) wifi:new:<10,0>, old:<1,0>, ap:<255,255>, sta:<10,0>, prof:1[0m
+[0;32mI (555) wifi:state: init -> auth (b0)[0m
+[0;32mI (555) wifi:state: auth -> assoc (0)[0m
+[0;32mI (555) wifi:state: assoc -> run (10)[0m
+[0;32mI (615) wifi:connected with Lymow, aid = 28, channel 10, BW20, bssid = 50:eb:f6:03:fa:68[0m
+[0;32mI (615) wifi:security: WPA2-PSK, phy: bgn, rssi: -50[0m
+[0;32mI (615) wifi:pm start, type: 1[0m
+
+[0;32mI (615) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (625) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (635) mqtt: esp32 connected to ap![0m
+[0;32mI (635) wifi:<ba-add>idx:0 (ifx:0, 50:eb:f6:03:fa:68), tid:6, ssn:0, winSize:64[0m
+[0;32mI (675) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (1635) esp_netif_handlers: sta ip: 192.168.1.110, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (1635) mqtt: esp32 get ip address[0m
+[0;32mI (1685) wifi:<ba-add>idx:1 (ifx:0, 50:eb:f6:03:fa:68), tid:0, ssn:0, winSize:64[0m
+[0;32mI (2925) mqtt: mqtt connected[0m
+[0;32mI (3345) mqtt: mqtt subcribed ack[0m
+[0;32mI (3355) mqtt: mqtt published ack[0m
+[0;32mI (5295) mqtt: mqtt published ack[0m
+[0;32mI (7245) mqtt: mqtt published ack[0m
+[0;32mI (7445) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (7445) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (9285) mqtt: mqtt published ack[0m
+[0;32mI (9335) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (9335) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (10625) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (10625) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (11245) mqtt: mqtt published ack[0m
+[0;32mI (11945) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (11945) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (13285) mqtt: mqtt published ack[0m
+[0;32mI (15235) mqtt: mqtt published ack[0m
+[0;32mI (16695) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (16695) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (17275) mqtt: mqtt published ack[0m
+[0;32mI (18955) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (18955) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (19225) mqtt: mqtt published ack[0m
+[0;32mI (20805) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (20805) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (21275) mqtt: mqtt published ack[0m
+[0;32mI (22935) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (22935) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (23225) mqtt: mqtt published ack[0m
+[0;32mI (25265) mqtt: mqtt published ack[0m
+[0;32mI (25525) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (25525) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (27315) mqtt: mqtt published ack[0m
+[0;32mI (29285) mqtt: mqtt published ack[0m
+[0;32mI (29785) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (29785) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (31215) mqtt: mqtt published ack[0m
+[0;32mI (33355) mqtt: mqtt published ack[0m
+[0;32mI (35295) mqtt: mqtt published ack[0m
+[0;32mI (37175) mqtt: mqtt published ack[0m
+[0;32mI (39295) mqtt: mqtt published ack[0m
+[0;32mI (40725) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (40725) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (41245) mqtt: mqtt published ack[0m
+[0;32mI (43295) mqtt: mqtt published ack[0m
+[0;32mI (45235) mqtt: mqtt published ack[0m
+[0;32mI (47285) mqtt: mqtt published ack[0m
+[0;32mI (48305) mqtt: topic->/topic/mqttx_0823{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (48305) mqtt: payload->{
+  "msg": "hello"
+}
+}�_�kd���?�[0m
+[0;32mI (49335) mqtt: mqtt published ack[0m
+[0;32mI (51195) mqtt: mqtt published ack[0m
+[0;32mI (53325) mqtt: mqtt published ack[0m
+[0;32mI (55265) mqtt: mqtt published ack[0m
+[0;32mI (57225) mqtt: mqtt published ack[0m
+[0;32mI (59265) mqtt: mqtt published ack[0m
+[0;32mI (61215) mqtt: mqtt published ack[0m
+[0;32mI (63235) mqtt: mqtt published ack[0m
+[0;32mI (65295) mqtt: mqtt published ack[0m
+[0;32mI (67255) mqtt: mqtt published ack[0m
+[0;32mI (69305) mqtt: mqtt published ack[0m
+[0;32mI (71245) mqtt: mqtt published ack[0m
+[0;32mI (73295) mqtt: mqtt published ack[0m
+[0;32mI (75245) mqtt: mqtt published ack[0m
+[0;32mI (77285) mqtt: mqtt published ack[0m
+[0;32mI (79235) mqtt: mqtt published ack[0m
+[0;32mI (81285) mqtt: mqtt published ack[0m
+[0;32mI (83245) mqtt: mqtt published ack[0m
+[0;32mI (85265) mqtt: mqtt published ack[0m
+[0;32mI (87235) mqtt: mqtt published ack[0m
+[0;32mI (89275) mqtt: mqtt published ack[0m
+[0;32mI (91315) mqtt: mqtt published ack[0m
+[0;32mI (93265) mqtt: mqtt published ack[0m
+[0;32mI (95205) mqtt: mqtt published ack[0m
+[0;32mI (97255) mqtt: mqtt published ack[0m
+[0;32mI (99295) mqtt: mqtt published ack[0m
+[0;32mI (101255) mqtt: mqtt published ack[0m
+[0;32mI (103295) mqtt: mqtt published ack[0m
+[0;32mI (105345) mqtt: mqtt published ack[0m
+[0;32mI (107285) mqtt: mqtt published ack[0m
+[0;32mI (109255) mqtt: mqtt published ack[0m
+[0;32mI (111295) mqtt: mqtt published ack[0m
+[0;32mI (113235) mqtt: mqtt published ack[0m
+[0;32mI (115275) mqtt: mqtt published ack[0m
+[0;32mI (117325) mqtt: mqtt published ack[0m
+[0;32mI (119285) mqtt: mqtt published ack[0m
+[0;32mI (121315) mqtt: mqtt published ack[0m
+[0;32mI (123265) mqtt: mqtt published ack[0m
+[0;32mI (125315) mqtt: mqtt published ack[0m
+[0;32mI (127265) mqtt: mqtt published ack[0m
+[0;32mI (129315) mqtt: mqtt published ack[0m
+[0;32mI (131265) mqtt: mqtt published ack[0m
+[0;32mI (133295) mqtt: mqtt published ack[0m
+[0;32mI (135345) mqtt: mqtt published ack[0m
+[0;32mI (137295) mqtt: mqtt published ack[0m
+[0;32mI (139245) mqtt: mqtt published ack[0m
+[0;32mI (141215) mqtt: mqtt published ack[0m
+[0;32mI (143335) mqtt: mqtt published ack[0m
+[0;32mI (145285) mqtt: mqtt published ack[0m
+[0;32mI (147235) mqtt: mqtt published ack[0m
+[0;32mI (149275) mqtt: mqtt published ack[0m
+[0;32mI (151315) mqtt: mqtt published ack[0m
+[0;32mI (153275) mqtt: mqtt published ack[0m
+[0;32mI (155225) mqtt: mqtt published ack[0m
+[0;32mI (157285) mqtt: mqtt published ack[0m
+[0;32mI (159305) mqtt: mqtt published ack[0m
+[0;32mI (161275) mqtt: mqtt published ack[0m
+[0;32mI (163295) mqtt: mqtt published ack[0m
+[0;32mI (165255) mqtt: mqtt published ack[0m
+[0;32mI (167295) mqtt: mqtt published ack[0m
+[0;32mI (169245) mqtt: mqtt published ack[0m
+[0;32mI (171285) mqtt: mqtt published ack[0m
+[0;32mI (173245) mqtt: mqtt published ack[0m
+[0;32mI (175285) mqtt: mqtt published ack[0m
+[0;32mI (177335) mqtt: mqtt published ack[0m
+[0;32mI (179285) mqtt: mqtt published ack[0m
+[0;32mI (181325) mqtt: mqtt published ack[0m
+[0;32mI (183285) mqtt: mqtt published ack[0m
+[0;32mI (185225) mqtt: mqtt published ack[0m
+[0;32mI (187275) mqtt: mqtt published ack[0m
+[0;32mI (189215) mqtt: mqtt published ack[0m
+[0;32mI (191265) mqtt: mqtt published ack[0m
+[0;32mI (193305) mqtt: mqtt published ack[0m
+[0;32mI (195255) mqtt: mqtt published ack[0m
+[0;32mI (197395) mqtt: mqtt published ack[0m
+[0;32mI (199345) mqtt: mqtt published ack[0m
+[0;32mI (201285) mqtt: mqtt published ack[0m
+[0;32mI (203335) mqtt: mqtt published ack[0m
+[0;32mI (205295) mqtt: mqtt published ack[0m
+[0;32mI (207235) mqtt: mqtt published ack[0m
+[0;32mI (209295) mqtt: mqtt published ack[0m
+[0;32mI (211335) mqtt: mqtt published ack[0m
+[0;32mI (213285) mqtt: mqtt published ack[0m
+[0;32mI (215325) mqtt: mqtt published ack[0m
+[0;32mI (217275) mqtt: mqtt published ack[0m
+[0;32mI (219315) mqtt: mqtt published ack[0m
+[0;32mI (221265) mqtt: mqtt published ack[0m
+[0;32mI (223305) mqtt: mqtt published ack[0m
+[0;32mI (225355) mqtt: mqtt published ack[0m
+[0;32mI (227305) mqtt: mqtt published ack[0m
+[0;32mI (229355) mqtt: mqtt published ack[0m
+[0;32mI (231295) mqtt: mqtt published ack[0m
+[0;32mI (233245) mqtt: mqtt published ack[0m
+[0;32mI (235295) mqtt: mqtt published ack[0m
+[0;32mI (237335) mqtt: mqtt published ack[0m
+[0;32mI (239285) mqtt: mqtt published ack[0m
+[0;32mI (241235) mqtt: mqtt published ack[0m
+[0;32mI (243295) mqtt: mqtt published ack[0m
+[0;32mI (245325) mqtt: mqtt published ack[0m
+[0;32mI (247195) mqtt: mqtt published ack[0m
+[0;32mI (249315) mqtt: mqtt published ack[0m
+[0;32mI (251235) mqtt: mqtt published ack[0m
+[0;32mI (253415) mqtt: mqtt published ack[0m
+[0;32mI (255285) mqtt: mqtt published ack[0m
+[0;32mI (257305) mqtt: mqtt published ack[0m
+[0;32mI (259355) mqtt: mqtt published ack[0m
+[0;32mI (261315) mqtt: mqtt published ack[0m
+[0;32mI (263265) mqtt: mqtt published ack[0m
+[0;32mI (265295) mqtt: mqtt published ack[0m
+[0;32mI (267335) mqtt: mqtt published ack[0m
+[0;32mI (269295) mqtt: mqtt published ack[0m
+[0;32mI (271235) mqtt: mqtt published ack[0m
+[0;32mI (273285) mqtt: mqtt published ack[0m
+[0;32mI (275335) mqtt: mqtt published ack[0m
+[0;32mI (277285) mqtt: mqtt published ack[0m
+[0;32mI (279315) mqtt: mqtt published ack[0m
+[0;32mI (281175) mqtt: mqtt published ack[0m
+[0;32mI (283225) mqtt: mqtt published ack[0m
+[0;32mI (285265) mqtt: mqtt published ack[0m
+[0;32mI (287325) mqtt: mqtt published ack[0m
+[0;32mI (289255) mqtt: mqtt published ack[0m
+[0;32mI (291305) mqtt: mqtt published ack[0m
+[0;32mI (293195) mqtt: mqtt published ack[0m
+[0;32mI (295315) mqtt: mqtt published ack[0m
+[0;32mI (297255) mqtt: mqtt published ack[0m
+[0;32mI (299295) mqtt: mqtt published ack[0m
+[0;32mI (301235) mqtt: mqtt published ack[0m
+[0;32mI (303285) mqtt: mqtt published ack[0m
+[0;32mI (305235) mqtt: mqtt published ack[0m
+[0;32mI (307265) mqtt: mqtt published ack[0m
+[0;32mI (309325) mqtt: mqtt published ack[0m
+[0;32mI (311275) mqtt: mqtt published ack[0m
+[0;32mI (313205) mqtt: mqtt published ack[0m
+[0;32mI (315275) mqtt: mqtt published ack[0m
+[0;32mI (317215) mqtt: mqtt published ack[0m
+[0;32mI (319265) mqtt: mqtt published ack[0m
+[0;32mI (321315) mqtt: mqtt published ack[0m
+[0;32mI (323355) mqtt: mqtt published ack[0m
+[0;32mI (325305) mqtt: mqtt published ack[0m
+[0;32mI (327255) mqtt: mqtt published ack[0m
+[0;32mI (329175) mqtt: mqtt published ack[0m
+[0;32mI (331345) mqtt: mqtt published ack[0m
+[0;32mI (333285) mqtt: mqtt published ack[0m
+[0;32mI (335235) mqtt: mqtt published ack[0m
+[0;32mI (337285) mqtt: mqtt published ack[0m
+[0;32mI (339195) mqtt: mqtt published ack[0m
+[0;32mI (341285) mqtt: mqtt published ack[0m
+[0;32mI (343215) mqtt: mqtt published ack[0m
+[0;32mI (345275) mqtt: mqtt published ack[0m
+[0;32mI (347245) mqtt: mqtt published ack[0m
+[0;32mI (349265) mqtt: mqtt published ack[0m
+[0;32mI (351215) mqtt: mqtt published ack[0m
+[0;32mI (353405) mqtt: mqtt published ack[0m
+[0;32mI (355185) mqtt: mqtt published ack[0m
+[0;32mI (357345) mqtt: mqtt published ack[0m
+[0;32mI (359305) mqtt: mqtt published ack[0m
+[0;32mI (361245) mqtt: mqtt published ack[0m
+[0;32mI (363315) mqtt: mqtt published ack[0m
+[0;32mI (365235) mqtt: mqtt published ack[0m
+[0;32mI (367285) mqtt: mqtt published ack[0m
+[0;32mI (369235) mqtt: mqtt published ack[0m
+[0;32mI (371285) mqtt: mqtt published ack[0m
+[0;32mI (373215) mqtt: mqtt published ack[0m
+[0;32mI (375275) mqtt: mqtt published ack[0m
+[0;32mI (377215) mqtt: mqtt published ack[0m
+[0;32mI (379265) mqtt: mqtt published ack[0m
+[0;32mI (381205) mqtt: mqtt published ack[0m
+[0;32mI (383365) mqtt: mqtt published ack[0m
+[0;32mI (385315) mqtt: mqtt published ack[0m
+[0;32mI (387265) mqtt: mqtt published ack[0m
+[0;32mI (389305) mqtt: mqtt published ack[0m
+[0;32mI (391255) mqtt: mqtt published ack[0m
+[0;32mI (393305) mqtt: mqtt published ack[0m
+[0;32mI (395295) mqtt: mqtt published ack[0m
+[0;32mI (397185) mqtt: mqtt published ack[0m
+[0;32mI (399285) mqtt: mqtt published ack[0m
+[0;32mI (401295) mqtt: mqtt published ack[0m
+[0;32mI (403235) mqtt: mqtt published ack[0m
+[0;32mI (405285) mqtt: mqtt published ack[0m
+[0;32mI (407225) mqtt: mqtt published ack[0m
+[0;32mI (409305) mqtt: mqtt published ack[0m
+[0;32mI (411215) mqtt: mqtt published ack[0m
+[0;32mI (413265) mqtt: mqtt published ack[0m
+[0;32mI (415215) mqtt: mqtt published ack[0m
+[0;32mI (417195) mqtt: mqtt published ack[0m
+[0;32mI (419185) mqtt: mqtt published ack[0m
+[0;32mI (421255) mqtt: mqtt published ack[0m
+[0;32mI (423335) mqtt: mqtt published ack[0m
+[0;32mI (425245) mqtt: mqtt published ack[0m
+[0;32mI (427305) mqtt: mqtt published ack[0m
+[0;32mI (429195) mqtt: mqtt published ack[0m
+[0;32mI (431185) mqtt: mqtt published ack[0m
+[0;32mI (433235) mqtt: mqtt published ack[0m
+[0;32mI (435295) mqtt: mqtt published ack[0m
+[0;32mI (437225) mqtt: mqtt published ack[0m
+[0;32mI (439275) mqtt: mqtt published ack[0m
+[0;32mI (441215) mqtt: mqtt published ack[0m
+[0;32mI (443275) mqtt: mqtt published ack[0m
+[0;32mI (445205) mqtt: mqtt published ack[0m
+[0;32mI (447255) mqtt: mqtt published ack[0m
+[0;32mI (449315) mqtt: mqtt published ack[0m
+[0;32mI (451255) mqtt: mqtt published ack[0m
+[0;32mI (453305) mqtt: mqtt published ack[0m
+[0;32mI (455245) mqtt: mqtt published ack[0m
+[0;32mI (457175) mqtt: mqtt published ack[0m
+[0;32mI (459235) mqtt: mqtt published ack[0m
+[0;32mI (461295) mqtt: mqtt published ack[0m
+[0;32mI (463235) mqtt: mqtt published ack[0m
+[0;32mI (465285) mqtt: mqtt published ack[0m
+[0;32mI (467235) mqtt: mqtt published ack[0m
+[0;32mI (469285) mqtt: mqtt published ack[0m
+[0;32mI (471335) mqtt: mqtt published ack[0m
+[0;32mI (473385) mqtt: mqtt published ack[0m
+[0;32mI (475215) mqtt: mqtt published ack[0m
+[0;32mI (477255) mqtt: mqtt published ack[0m
+[0;32mI (479205) mqtt: mqtt published ack[0m
+[0;32mI (481255) mqtt: mqtt published ack[0m
+[0;32mI (483315) mqtt: mqtt published ack[0m
+[0;32mI (485245) mqtt: mqtt published ack[0m
+[0;32mI (487305) mqtt: mqtt published ack[0m
+[0;32mI (489245) mqtt: mqtt published ack[0m
+[0;32mI (491295) mqtt: mqtt published ack[0m
+[0;32mI (493235) mqtt: mqtt published ack[0m
+[0;32mI (495295) mqtt: mqtt published ack[0m
+[0;32mI (497225) mqtt: mqtt published ack[0m
+[0;32mI (499185) mqtt: mqtt published ack[0m
+[0;32mI (501225) mqtt: mqtt published ack[0m
+[0;32mI (503275) mqtt: mqtt published ack[0m
+[0;32mI (505225) mqtt: mqtt published ack[0m
+[0;32mI (507265) mqtt: mqtt published ack[0m
+[0;32mI (509215) mqtt: mqtt published ack[0m
+[0;32mI (511255) mqtt: mqtt published ack[0m
+[0;32mI (513305) mqtt: mqtt published ack[0m
+[0;32mI (515355) mqtt: mqtt published ack[0m
+[0;32mI (517205) mqtt: mqtt published ack[0m
+[0;32mI (519245) mqtt: mqtt published ack[0m
+[0;32mI (521295) mqtt: mqtt published ack[0m
+[0;32mI (523245) mqtt: mqtt published ack[0m
+[0;32mI (525285) mqtt: mqtt published ack[0m
+[0;32mI (527235) mqtt: mqtt published ack[0m
+[0;32mI (529285) mqtt: mqtt published ack[0m
+[0;32mI (531235) mqtt: mqtt published ack[0m
+[0;32mI (533275) mqtt: mqtt published ack[0m
+[0;32mI (535215) mqtt: mqtt published ack[0m
+[0;32mI (537265) mqtt: mqtt published ack[0m
+[0;32mI (539225) mqtt: mqtt published ack[0m
+[0;32mI (541265) mqtt: mqtt published ack[0m
+[0;32mI (543325) mqtt: mqtt published ack[0m
+[0;32mI (545255) mqtt: mqtt published ack[0m
+[0;31mE (545765) transport_base: tcp_read error, errno=Socket is not connected[0m
+[0;31mE (545765) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=128[0m
+[0;31mE (545775) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -1[0m
+[0;32mI (545785) mqtt: mqtt disconnected[0m
+[0;32mI (561645) mqtt: mqtt connected[0m
+[0;32mI (561945) mqtt: mqtt subcribed ack[0m
+[0;32mI (561945) mqtt: mqtt published ack[0m
+[0;32mI (562255) mqtt: mqtt published ack[0m
+[0;32mI (562255) mqtt: mqtt published ack[0m
+[0;32mI (562595) mqtt: mqtt published ack[0m
+[0;32mI (562595) mqtt: mqtt published ack[0m
+[0;32mI (562975) mqtt: mqtt published ack[0m
+[0;32mI (562975) mqtt: mqtt published ack[0m
+[0;32mI (563275) mqtt: mqtt published ack[0m
+[0;32mI (564015) mqtt: mqtt published ack[0m
+[0;32mI (565945) mqtt: mqtt published ack[0m
+[0;32mI (568025) mqtt: mqtt published ack[0m
+[0;32mI (570245) mqtt: mqtt published ack[0m
+[0;32mI (572005) mqtt: mqtt published ack[0m
+[0;32mI (574065) mqtt: mqtt published ack[0m
+[0;32mI (575985) mqtt: mqtt published ack[0m
+[0;32mI (578055) mqtt: mqtt published ack[0m
+[0;32mI (579965) mqtt: mqtt published ack[0m
+[0;32mI (582045) mqtt: mqtt published ack[0m
+[0;32mI (583965) mqtt: mqtt published ack[0m
+[0;32mI (586065) mqtt: mqtt published ack[0m
+[0;32mI (587955) mqtt: mqtt published ack[0m
+[0;32mI (590055) mqtt: mqtt published ack[0m
+[0;32mI (591945) mqtt: mqtt published ack[0m
+[0;32mI (594025) mqtt: mqtt published ack[0m
+[0;32mI (595955) mqtt: mqtt published ack[0m
+[0;32mI (598015) mqtt: mqtt published ack[0m
+[0;32mI (599945) mqtt: mqtt published ack[0m
+[0;32mI (601985) mqtt: mqtt published ack[0m
+[0;32mI (603935) mqtt: mqtt published ack[0m
+[0;32mI (605975) mqtt: mqtt published ack[0m
+[0;32mI (608045) mqtt: mqtt published ack[0m
+[0;32mI (610445) mqtt: mqtt published ack[0m
+[0;32mI (612255) mqtt: mqtt published ack[0m
+[0;32mI (614235) mqtt: mqtt published ack[0m
+[0;32mI (616045) mqtt: mqtt published ack[0m
+[0;32mI (618085) mqtt: mqtt published ack[0m
+[0;32mI (620025) mqtt: mqtt published ack[0m
+[0;32mI (621955) mqtt: mqtt published ack[0m
+[0;32mI (624015) mqtt: mqtt published ack[0m
+[0;32mI (625945) mqtt: mqtt published ack[0m
+[0;32mI (627995) mqtt: mqtt published ack[0m
+[0;32mI (630075) mqtt: mqtt published ack[0m
+[0;32mI (631995) mqtt: mqtt published ack[0m
+[0;32mI (633955) mqtt: mqtt published ack[0m
+[0;32mI (635985) mqtt: mqtt published ack[0m
+[0;32mI (638115) mqtt: mqtt published ack[0m
+[0;32mI (639975) mqtt: mqtt published ack[0m
+[0;32mI (642095) mqtt: mqtt published ack[0m
+[0;32mI (644105) mqtt: mqtt published ack[0m
+[0;32mI (646045) mqtt: mqtt published ack[0m
+[0;32mI (647965) mqtt: mqtt published ack[0m
+[0;32mI (650315) mqtt: mqtt published ack[0m
+[0;32mI (651955) mqtt: mqtt published ack[0m
+[0;32mI (654015) mqtt: mqtt published ack[0m
+[0;32mI (655955) mqtt: mqtt published ack[0m
+[0;32mI (657995) mqtt: mqtt published ack[0m
+[0;32mI (660115) mqtt: mqtt published ack[0m
+[0;32mI (661995) mqtt: mqtt published ack[0m
+[0;32mI (663935) mqtt: mqtt published ack[0m
+[0;32mI (665985) mqtt: mqtt published ack[0m
+[0;32mI (668065) mqtt: mqtt published ack[0m
+[0;32mI (669985) mqtt: mqtt published ack[0m
+[0;32mI (672055) mqtt: mqtt published ack[0m
+[0;32mI (673975) mqtt: mqtt published ack[0m
+[0;32mI (676035) mqtt: mqtt published ack[0m
+[0;32mI (677965) mqtt: mqtt published ack[0m
+[0;32mI (680015) mqtt: mqtt published ack[0m
+[0;32mI (681965) mqtt: mqtt published ack[0m
+[0;32mI (684005) mqtt: mqtt published ack[0m
+[0;32mI (685955) mqtt: mqtt published ack[0m
+[0;32mI (688005) mqtt: mqtt published ack[0m
+[0;32mI (690305) mqtt: mqtt published ack[0m
+[0;32mI (691995) mqtt: mqtt published ack[0m
+[0;32mI (693935) mqtt: mqtt published ack[0m
+[0;32mI (695985) mqtt: mqtt published ack[0m
+[0;32mI (697935) mqtt: mqtt published ack[0m
+[0;32mI (699985) mqtt: mqtt published ack[0m
+[0;32mI (702055) mqtt: mqtt published ack[0m
+[0;32mI (703975) mqtt: mqtt published ack[0m
+[0;32mI (706055) mqtt: mqtt published ack[0m
+[0;32mI (707975) mqtt: mqtt published ack[0m
+[0;32mI (710025) mqtt: mqtt published ack[0m
+[0;32mI (711985) mqtt: mqtt published ack[0m
+[0;32mI (714015) mqtt: mqtt published ack[0m
+[0;32mI (715955) mqtt: mqtt published ack[0m
+[0;32mI (718005) mqtt: mqtt published ack[0m
+[0;32mI (719945) mqtt: mqtt published ack[0m
+[0;32mI (721995) mqtt: mqtt published ack[0m
+[0;32mI (723945) mqtt: mqtt published ack[0m
+[0;32mI (725995) mqtt: mqtt published ack[0m
+[0;32mI (727935) mqtt: mqtt published ack[0m
+[0;32mI (729985) mqtt: mqtt published ack[0m
+[0;32mI (731935) mqtt: mqtt published ack[0m
+[0;32mI (733985) mqtt: mqtt published ack[0m
+[0;32mI (736325) mqtt: mqtt published ack[0m
+[0;32mI (737975) mqtt: mqtt published ack[0m
+[0;32mI (740025) mqtt: mqtt published ack[0m
+[0;32mI (741965) mqtt: mqtt published ack[0m
+[0;32mI (743985) mqtt: mqtt published ack[0m
+[0;32mI (745965) mqtt: mqtt published ack[0m
+[0;32mI (748015) mqtt: mqtt published ack[0m
+[0;32mI (749965) mqtt: mqtt published ack[0m
+[0;32mI (752005) mqtt: mqtt published ack[0m
+[0;32mI (754375) mqtt: mqtt published ack[0m
+[0;32mI (755995) mqtt: mqtt published ack[0m
+[0;32mI (758075) mqtt: mqtt published ack[0m
+[0;32mI (759995) mqtt: mqtt published ack[0m
+[0;32mI (762035) mqtt: mqtt published ack[0m
+[0;32mI (763985) mqtt: mqtt published ack[0m
+[0;32mI (766025) mqtt: mqtt published ack[0m
+[0;32mI (767975) mqtt: mqtt published ack[0m
+[0;32mI (770025) mqtt: mqtt published ack[0m
+[0;32mI (771975) mqtt: mqtt published ack[0m
+[0;32mI (774015) mqtt: mqtt published ack[0m
+[0;32mI (775975) mqtt: mqtt published ack[0m
+[0;32mI (778015) mqtt: mqtt published ack[0m
+[0;32mI (779955) mqtt: mqtt published ack[0m
+[0;32mI (782005) mqtt: mqtt published ack[0m
+[0;32mI (783955) mqtt: mqtt published ack[0m
+[0;32mI (785995) mqtt: mqtt published ack[0m
+[0;32mI (787945) mqtt: mqtt published ack[0m
+[0;32mI (789995) mqtt: mqtt published ack[0m
+[0;32mI (791935) mqtt: mqtt published ack[0m
+[0;32mI (793985) mqtt: mqtt published ack[0m
+[0;32mI (796035) mqtt: mqtt published ack[0m
+[0;32mI (798285) mqtt: mqtt published ack[0m
+[0;32mI (800035) mqtt: mqtt published ack[0m
+[0;32mI (801975) mqtt: mqtt published ack[0m
+[0;32mI (804015) mqtt: mqtt published ack[0m
+[0;32mI (805965) mqtt: mqtt published ack[0m
+[0;32mI (808015) mqtt: mqtt published ack[0m
+[0;32mI (809965) mqtt: mqtt published ack[0m
+[0;32mI (812005) mqtt: mqtt published ack[0m
+[0;32mI (813955) mqtt: mqtt published ack[0m
+[0;32mI (816005) mqtt: mqtt published ack[0m
+[0;32mI (817945) mqtt: mqtt published ack[0m
+[0;32mI (820325) mqtt: mqtt published ack[0m
+[0;32mI (821945) mqtt: mqtt published ack[0m
+[0;32mI (823985) mqtt: mqtt published ack[0m
+[0;32mI (825935) mqtt: mqtt published ack[0m
+[0;32mI (827985) mqtt: mqtt published ack[0m
+[0;32mI (830035) mqtt: mqtt published ack[0m
+[0;32mI (831975) mqtt: mqtt published ack[0m
+[0;32mI (834025) mqtt: mqtt published ack[0m
+[0;32mI (835965) mqtt: mqtt published ack[0m
+[0;32mI (838015) mqtt: mqtt published ack[0m
+[0;32mI (840325) mqtt: mqtt published ack[0m
+[0;32mI (842015) mqtt: mqtt published ack[0m
+[0;32mI (843955) mqtt: mqtt published ack[0m
+[0;32mI (846015) mqtt: mqtt published ack[0m
+[0;32mI (847955) mqtt: mqtt published ack[0m
+[0;32mI (850005) mqtt: mqtt published ack[0m
+[0;32mI (851945) mqtt: mqtt published ack[0m
+[0;32mI (853995) mqtt: mqtt published ack[0m
+[0;32mI (855935) mqtt: mqtt published ack[0m
+[0;32mI (858005) mqtt: mqtt published ack[0m
+[0;32mI (860035) mqtt: mqtt published ack[0m
+[0;32mI (861975) mqtt: mqtt published ack[0m
+[0;32mI (864035) mqtt: mqtt published ack[0m
+[0;32mI (866335) mqtt: mqtt published ack[0m
+[0;32mI (867925) mqtt: mqtt published ack[0m
+[0;32mI (869975) mqtt: mqtt published ack[0m
+[0;32mI (872015) mqtt: mqtt published ack[0m
+[0;32mI (873955) mqtt: mqtt published ack[0m
+[0;32mI (876005) mqtt: mqtt published ack[0m
+[0;32mI (877955) mqtt: mqtt published ack[0m
+[0;32mI (880005) mqtt: mqtt published ack[0m
+[0;32mI (881955) mqtt: mqtt published ack[0m
+[0;32mI (883995) mqtt: mqtt published ack[0m
+[0;32mI (885955) mqtt: mqtt published ack[0m
+[0;32mI (887995) mqtt: mqtt published ack[0m
+[0;32mI (889935) mqtt: mqtt published ack[0m
+[0;32mI (891985) mqtt: mqtt published ack[0m
+[0;32mI (894325) mqtt: mqtt published ack[0m
+[0;32mI (895975) mqtt: mqtt published ack[0m
+[0;32mI (898035) mqtt: mqtt published ack[0m
+[0;32mI (899975) mqtt: mqtt published ack[0m
+[0;32mI (902505) mqtt: mqtt published ack[0m
+[0;32mI (903965) mqtt: mqtt published ack[0m
+[0;32mI (906015) mqtt: mqtt published ack[0m
+[0;32mI (907955) mqtt: mqtt published ack[0m
+[0;32mI (910015) mqtt: mqtt published ack[0m
+[0;32mI (911955) mqtt: mqtt published ack[0m
+[0;32mI (913995) mqtt: mqtt published ack[0m
+[0;32mI (916045) mqtt: mqtt published ack[0m
+[0;32mI (917995) mqtt: mqtt published ack[0m
+[0;32mI (920035) mqtt: mqtt published ack[0m
+[0;32mI (921985) mqtt: mqtt published ack[0m
+[0;32mI (923925) mqtt: mqtt published ack[0m
+[0;32mI (925985) mqtt: mqtt published ack[0m
+[0;32mI (928235) mqtt: mqtt published ack[0m
+[0;32mI (929975) mqtt: mqtt published ack[0m
+[0;32mI (932025) mqtt: mqtt published ack[0m
+[0;32mI (933985) mqtt: mqtt published ack[0m
+[0;32mI (936025) mqtt: mqtt published ack[0m
+[0;32mI (937955) mqtt: mqtt published ack[0m
+[0;32mI (940015) mqtt: mqtt published ack[0m
+[0;32mI (941955) mqtt: mqtt published ack[0m
+[0;32mI (944445) mqtt: mqtt published ack[0m
+[0;32mI (946055) mqtt: mqtt published ack[0m
+[0;32mI (947995) mqtt: mqtt published ack[0m
+[0;32mI (950045) mqtt: mqtt published ack[0m
+[0;32mI (951985) mqtt: mqtt published ack[0m
+[0;32mI (954045) mqtt: mqtt published ack[0m
+[0;32mI (955985) mqtt: mqtt published ack[0m
+[0;32mI (958035) mqtt: mqtt published ack[0m
+[0;32mI (959985) mqtt: mqtt published ack[0m
+[0;32mI (962465) mqtt: mqtt published ack[0m
+[0;32mI (963965) mqtt: mqtt published ack[0m
+[0;32mI (966015) mqtt: mqtt published ack[0m
+[0;32mI (967965) mqtt: mqtt published ack[0m
+[0;32mI (970015) mqtt: mqtt published ack[0m
+[0;32mI (971965) mqtt: mqtt published ack[0m
+[0;32mI (974025) mqtt: mqtt published ack[0m
+[0;32mI (976055) mqtt: mqtt published ack[0m
+[0;32mI (978005) mqtt: mqtt published ack[0m
+[0;32mI (980045) mqtt: mqtt published ack[0m
+[0;32mI (981995) mqtt: mqtt published ack[0m
+[0;32mI (983945) mqtt: mqtt published ack[0m
+[0;32mI (985985) mqtt: mqtt published ack[0m
+[0;32mI (988245) mqtt: mqtt published ack[0m
+[0;32mI (989985) mqtt: mqtt published ack[0m
+[0;32mI (992035) mqtt: mqtt published ack[0m
+[0;32mI (994085) mqtt: mqtt published ack[0m
+[0;32mI (996025) mqtt: mqtt published ack[0m
+[0;32mI (998275) mqtt: mqtt published ack[0m
+[0;32mI (1000015) mqtt: mqtt published ack[0m
+[0;32mI (1002065) mqtt: mqtt published ack[0m
+[0;32mI (1004365) mqtt: mqtt published ack[0m
+[0;32mI (1006055) mqtt: mqtt published ack[0m
+[0;32mI (1008005) mqtt: mqtt published ack[0m
+[0;32mI (1010045) mqtt: mqtt published ack[0m
+[0;32mI (1011995) mqtt: mqtt published ack[0m
+[0;32mI (1014045) mqtt: mqtt published ack[0m
+[0;32mI (1015985) mqtt: mqtt published ack[0m
+[0;32mI (1018035) mqtt: mqtt published ack[0m
+[0;32mI (1019985) mqtt: mqtt published ack[0m
+[0;32mI (1022035) mqtt: mqtt published ack[0m
+[0;32mI (1024075) mqtt: mqtt published ack[0m
+[0;32mI (1026025) mqtt: mqtt published ack[0m
+[0;32mI (1027975) mqtt: mqtt published ack[0m
+[0;32mI (1030025) mqtt: mqtt published ack[0m
+[0;32mI (1031965) mqtt: mqtt published ack[0m
+[0;32mI (1034015) mqtt: mqtt published ack[0m
+[0;32mI (1035965) mqtt: mqtt published ack[0m
+[0;32mI (1038005) mqtt: mqtt published ack[0m
+[0;32mI (1040055) mqtt: mqtt published ack[0m
+[0;32mI (1042005) mqtt: mqtt published ack[0m
+[0;32mI (1044045) mqtt: mqtt published ack[0m
+[0;32mI (1045995) mqtt: mqtt published ack[0m
+[0;32mI (1048035) mqtt: mqtt published ack[0m
+[0;32mI (1050085) mqtt: mqtt published ack[0m
+[0;32mI (1052035) mqtt: mqtt published ack[0m
+[0;32mI (1053985) mqtt: mqtt published ack[0m
+[0;32mI (1056265) mqtt: mqtt published ack[0m
+[0;32mI (1057975) mqtt: mqtt published ack[0m
+[0;32mI (1060025) mqtt: mqtt published ack[0m
+[0;32mI (1062065) mqtt: mqtt published ack[0m
+[0;32mI (1064015) mqtt: mqtt published ack[0m
+[0;32mI (1065965) mqtt: mqtt published ack[0m
+[0;32mI (1068005) mqtt: mqtt published ack[0m
+[0;32mI (1071085) mqtt: mqtt published ack[0m
+[0;32mI (1072335) mqtt: mqtt published ack[0m
+[0;32mI (1074295) mqtt: mqtt published ack[0m
+[0;32mI (1075995) mqtt: mqtt published ack[0m
+[0;32mI (1078045) mqtt: mqtt published ack[0m
+[0;32mI (1079985) mqtt: mqtt published ack[0m
+[0;32mI (1082255) mqtt: mqtt published ack[0m
+[0;32mI (1084045) mqtt: mqtt published ack[0m
+[0;32mI (1086035) mqtt: mqtt published ack[0m
+[0;32mI (1088075) mqtt: mqtt published ack[0m
+[0;32mI (1090025) mqtt: mqtt published ack[0m
+[0;32mI (1092075) mqtt: mqtt published ack[0m
+[0;32mI (1094035) mqtt: mqtt published ack[0m
+[0;32mI (1096065) mqtt: mqtt published ack[0m
+[0;32mI (1098315) mqtt: mqtt published ack[0m
+[0;32mI (1099955) mqtt: mqtt published ack[0m
+[0;32mI (1102015) mqtt: mqtt published ack[0m
+[0;32mI (1104055) mqtt: mqtt published ack[0m
+[0;32mI (1106005) mqtt: mqtt published ack[0m
+[0;32mI (1108045) mqtt: mqtt published ack[0m
+[0;32mI (1109995) mqtt: mqtt published ack[0m
+[0;32mI (1112045) mqtt: mqtt published ack[0m
+[0;32mI (1113995) mqtt: mqtt published ack[0m
+[0;32mI (1116035) mqtt: mqtt published ack[0m
+[0;32mI (1118215) mqtt: mqtt published ack[0m
+[0;32mI (1120035) mqtt: mqtt published ack[0m
+[0;32mI (1122075) mqtt: mqtt published ack[0m
+[0;32mI (1124025) mqtt: mqtt published ack[0m
+[0;32mI (1126645) mqtt: mqtt published ack[0m
+[0;32mI (1128335) mqtt: mqtt published ack[0m
+[0;32mI (1130065) mqtt: mqtt published ack[0m
+[0;32mI (1132005) mqtt: mqtt published ack[0m
+[0;32mI (1133955) mqtt: mqtt published ack[0m
+[0;32mI (1136005) mqtt: mqtt published ack[0m
+[0;32mI (1137955) mqtt: mqtt published ack[0m
+[0;32mI (1140305) mqtt: mqtt published ack[0m
+[0;32mI (1142055) mqtt: mqtt published ack[0m
+[0;32mI (1143985) mqtt: mqtt published ack[0m
+[0;32mI (1146035) mqtt: mqtt published ack[0m
+[0;32mI (1148295) mqtt: mqtt published ack[0m
+[0;32mI (1150035) mqtt: mqtt published ack[0m
+[0;32mI (1151975) mqtt: mqtt published ack[0m
+[0;32mI (1154025) mqtt: mqtt published ack[0m
+[0;32mI (1155985) mqtt: mqtt published ack[0m
+[0;32mI (1158335) mqtt: mqtt published ack[0m
+[0;32mI (1159965) mqtt: mqtt published ack[0m
+[0;32mI (1162015) mqtt: mqtt published ack[0m
+[0;32mI (1164065) mqtt: mqtt published ack[0m
+[0;32mI (1166005) mqtt: mqtt published ack[0m
+[0;32mI (1168275) mqtt: mqtt published ack[0m
+[0;32mI (1169995) mqtt: mqtt published ack[0m
+[0;32mI (1172055) mqtt: mqtt published ack[0m
+[0;32mI (1174305) mqtt: mqtt published ack[0m
+[0;32mI (1176045) mqtt: mqtt published ack[0m
+[0;32mI (1177985) mqtt: mqtt published ack[0m
+[0;32mI (1179945) mqtt: mqtt published ack[0m
+[0;32mI (1181985) mqtt: mqtt published ack[0m
+[0;32mI (1184025) mqtt: mqtt published ack[0m
+[0;32mI (1185975) mqtt: mqtt published ack[0m
+[0;32mI (1188025) mqtt: mqtt published ack[0m
+[0;32mI (1190065) mqtt: mqtt published ack[0m
+[0;32mI (1192045) mqtt: mqtt published ack[0m
+[0;32mI (1194085) mqtt: mqtt published ack[0m
+[0;32mI (1196025) mqtt: mqtt published ack[0m
+[0;32mI (1198065) mqtt: mqtt published ack[0m
+[0;32mI (1200005) mqtt: mqtt published ack[0m
+[0;32mI (1202055) mqtt: mqtt published ack[0m
+[0;32mI (1203995) mqtt: mqtt published ack[0m
+[0;32mI (1205965) mqtt: mqtt published ack[0m
+[0;32mI (1207995) mqtt: mqtt published ack[0m
+[0;32mI (1210045) mqtt: mqtt published ack[0m
+[0;32mI (1212005) mqtt: mqtt published ack[0m
+[0;32mI (1214035) mqtt: mqtt published ack[0m
+[0;32mI (1215985) mqtt: mqtt published ack[0m
+[0;32mI (1218025) mqtt: mqtt published ack[0m
+[0;32mI (1219975) mqtt: mqtt published ack[0m
+[0;32mI (1222025) mqtt: mqtt published ack[0m
+[0;32mI (1223965) mqtt: mqtt published ack[0m
+[0;32mI (1226025) mqtt: mqtt published ack[0m
+[0;32mI (1227955) mqtt: mqtt published ack[0m
+[0;32mI (1230005) mqtt: mqtt published ack[0m
+[0;32mI (1231955) mqtt: mqtt published ack[0m
+[0;32mI (1234035) mqtt: mqtt published ack[0m
+[0;32mI (1235955) mqtt: mqtt published ack[0m
+[0;32mI (1238035) mqtt: mqtt published ack[0m
+[0;32mI (1240045) mqtt: mqtt published ack[0m
+[0;32mI (1242105) mqtt: mqtt published ack[0m
+[0;32mI (1244035) mqtt: mqtt published ack[0m
+[0;32mI (1245985) mqtt: mqtt published ack[0m
+[0;32mI (1248135) mqtt: mqtt published ack[0m
+[0;32mI (1250025) mqtt: mqtt published ack[0m
+[0;32mI (1252025) mqtt: mqtt published ack[0m
+[0;32mI (1254095) mqtt: mqtt published ack[0m
+[0;32mI (1256015) mqtt: mqtt published ack[0m
+[0;32mI (1258065) mqtt: mqtt published ack[0m
+[0;32mI (1260015) mqtt: mqtt published ack[0m
+[0;32mI (1262055) mqtt: mqtt published ack[0m
+[0;32mI (1264005) mqtt: mqtt published ack[0m
+[0;32mI (1265945) mqtt: mqtt published ack[0m
+[0;32mI (1267995) mqtt: mqtt published ack[0m
+[0;32mI (1270045) mqtt: mqtt published ack[0m
+[0;32mI (1272355) mqtt: mqtt published ack[0m
+[0;32mI (1274065) mqtt: mqtt published ack[0m
+[0;32mI (1276325) mqtt: mqtt published ack[0m
+[0;32mI (1278065) mqtt: mqtt published ack[0m
+[0;32mI (1279985) mqtt: mqtt published ack[0m
+[0;32mI (1282025) mqtt: mqtt published ack[0m
+[0;32mI (1283975) mqtt: mqtt published ack[0m
+[0;32mI (1286025) mqtt: mqtt published ack[0m
+[0;32mI (1288375) mqtt: mqtt published ack[0m
+[0;32mI (1290015) mqtt: mqtt published ack[0m
+[0;32mI (1292235) mqtt: mqtt published ack[0m
+[0;32mI (1294005) mqtt: mqtt published ack[0m
+[0;32mI (1295955) mqtt: mqtt published ack[0m
+[0;32mI (1298015) mqtt: mqtt published ack[0m
+[0;32mI (1300055) mqtt: mqtt published ack[0m
+[0;32mI (1301995) mqtt: mqtt published ack[0m
+[0;32mI (1304045) mqtt: mqtt published ack[0m
+[0;32mI (1306315) mqtt: mqtt published ack[0m
+[0;32mI (1307935) mqtt: mqtt published ack[0m
+[0;32mI (1309985) mqtt: mqtt published ack[0m
+[0;32mI (1312345) mqtt: mqtt published ack[0m
+[0;32mI (1313985) mqtt: mqtt published ack[0m
+[0;32mI (1316355) mqtt: mqtt published ack[0m
+[0;32mI (1317975) mqtt: mqtt published ack[0m
+[0;32mI (1320015) mqtt: mqtt published ack[0m
+[0;32mI (1322005) mqtt: mqtt published ack[0m
+[0;32mI (1324005) mqtt: mqtt published ack[0m
+[0;32mI (1325955) mqtt: mqtt published ack[0m
+[0;32mI (1328005) mqtt: mqtt published ack[0m
+[0;32mI (1329955) mqtt: mqtt published ack[0m
+[0;32mI (1332015) mqtt: mqtt published ack[0m
+[0;32mI (1334075) mqtt: mqtt published ack[0m
+[0;32mI (1335995) mqtt: mqtt published ack[0m
+[0;32mI (1338045) mqtt: mqtt published ack[0m
+[0;32mI (1340305) mqtt: mqtt published ack[0m
+[0;32mI (1341925) mqtt: mqtt published ack[0m
+[0;32mI (1343985) mqtt: mqtt published ack[0m
+[0;32mI (1346025) mqtt: mqtt published ack[0m
+[0;32mI (1347975) mqtt: mqtt published ack[0m
+[0;32mI (1350025) mqtt: mqtt published ack[0m
+[0;32mI (1351975) mqtt: mqtt published ack[0m
+[0;32mI (1354005) mqtt: mqtt published ack[0m
+[0;32mI (1355955) mqtt: mqtt published ack[0m
+[0;32mI (1358015) mqtt: mqtt published ack[0m
+[0;32mI (1359955) mqtt: mqtt published ack[0m
+[0;32mI (1362005) mqtt: mqtt published ack[0m
+[0;32mI (1363945) mqtt: mqtt published ack[0m
+[0;32mI (1365995) mqtt: mqtt published ack[0m
+[0;32mI (1367945) mqtt: mqtt published ack[0m
+[0;32mI (1369995) mqtt: mqtt published ack[0m
+[0;32mI (1372045) mqtt: mqtt published ack[0m
+[0;32mI (1373985) mqtt: mqtt published ack[0m
+[0;32mI (1376035) mqtt: mqtt published ack[0m
+[0;32mI (1378295) mqtt: mqtt published ack[0m
+[0;32mI (1380035) mqtt: mqtt published ack[0m
+[0;32mI (1382075) mqtt: mqtt published ack[0m
+[0;32mI (1384015) mqtt: mqtt published ack[0m
+[0;32mI (1386065) mqtt: mqtt published ack[0m
+[0;32mI (1388025) mqtt: mqtt published ack[0m
+[0;32mI (1389955) mqtt: mqtt published ack[0m
+[0;32mI (1392005) mqtt: mqtt published ack[0m
+[0;32mI (1393955) mqtt: mqtt published ack[0m
+[0;32mI (1396015) mqtt: mqtt published ack[0m
+[0;32mI (1397945) mqtt: mqtt published ack[0m
+[0;32mI (1399995) mqtt: mqtt published ack[0m
+[0;32mI (1402035) mqtt: mqtt published ack[0m
+[0;32mI (1404085) mqtt: mqtt published ack[0m
+[0;32mI (1406035) mqtt: mqtt published ack[0m
+[0;32mI (1408085) mqtt: mqtt published ack[0m
+[0;32mI (1410035) mqtt: mqtt published ack[0m
+[0;32mI (1412295) mqtt: mqtt published ack[0m
+[0;32mI (1414025) mqtt: mqtt published ack[0m
+[0;32mI (1415965) mqtt: mqtt published ack[0m
+[0;32mI (1418025) mqtt: mqtt published ack[0m
+[0;32mI (1420065) mqtt: mqtt published ack[0m
+[0;32mI (1422005) mqtt: mqtt published ack[0m
+[0;32mI (1424275) mqtt: mqtt published ack[0m
+[0;32mI (1426005) mqtt: mqtt published ack[0m
+[0;32mI (1428005) mqtt: mqtt published ack[0m
+[0;32mI (1430005) mqtt: mqtt published ack[0m
+[0;32mI (1432615) mqtt: mqtt published ack[0m
+[0;32mI (1433985) mqtt: mqtt published ack[0m
+[0;32mI (1436035) mqtt: mqtt published ack[0m
+[0;32mI (1437985) mqtt: mqtt published ack[0m
+[0;32mI (1440135) mqtt: mqtt published ack[0m
+[0;32mI (1442005) mqtt: mqtt published ack[0m
+[0;32mI (1443935) mqtt: mqtt published ack[0m
+[0;32mI (1445985) mqtt: mqtt published ack[0m
+[0;32mI (1448015) mqtt: mqtt published ack[0m
+[0;32mI (1449965) mqtt: mqtt published ack[0m
+[0;32mI (1452025) mqtt: mqtt published ack[0m
+[0;32mI (1453955) mqtt: mqtt published ack[0m
+[0;32mI (1456005) mqtt: mqtt published ack[0m
+[0;32mI (1458145) mqtt: mqtt published ack[0m
+[0;32mI (1460005) mqtt: mqtt published ack[0m
+[0;32mI (1462045) mqtt: mqtt published ack[0m
+[0;32mI (1464335) mqtt: mqtt published ack[0m
+[0;32mI (1465935) mqtt: mqtt published ack[0m
+[0;32mI (1467985) mqtt: mqtt published ack[0m
+[0;32mI (1469955) mqtt: mqtt published ack[0m
+[0;32mI (1472085) mqtt: mqtt published ack[0m
+[0;32mI (1474135) mqtt: mqtt published ack[0m
+[0;32mI (1475975) mqtt: mqtt published ack[0m
+[0;32mI (1478025) mqtt: mqtt published ack[0m
+[0;32mI (1479965) mqtt: mqtt published ack[0m
+[0;32mI (1482025) mqtt: mqtt published ack[0m
+[0;32mI (1483965) mqtt: mqtt published ack[0m
+[0;32mI (1486005) mqtt: mqtt published ack[0m
+[0;32mI (1487955) mqtt: mqtt published ack[0m
+[0;32mI (1490025) mqtt: mqtt published ack[0m
+[0;32mI (1492055) mqtt: mqtt published ack[0m
+[0;32mI (1493995) mqtt: mqtt published ack[0m
+[0;32mI (1495945) mqtt: mqtt published ack[0m
+[0;32mI (1497925) mqtt: mqtt published ack[0m
+[0;32mI (1500035) mqtt: mqtt published ack[0m
+[0;32mI (1501985) mqtt: mqtt published ack[0m
+[0;32mI (1504025) mqtt: mqtt published ack[0m
+[0;32mI (1505995) mqtt: mqtt published ack[0m
+[0;32mI (1508035) mqtt: mqtt published ack[0m
+[0;32mI (1510075) mqtt: mqtt published ack[0m
+[0;32mI (1512015) mqtt: mqtt published ack[0m
+[0;32mI (1514065) mqtt: mqtt published ack[0m
+[0;32mI (1516015) mqtt: mqtt published ack[0m
+[0;32mI (1517955) mqtt: mqtt published ack[0m
+[0;32mI (1520015) mqtt: mqtt published ack[0m
+[0;32mI (1521955) mqtt: mqtt published ack[0m
+[0;32mI (1523995) mqtt: mqtt published ack[0m
+[0;32mI (1526045) mqtt: mqtt published ack[0m
+[0;32mI (1528055) mqtt: mqtt published ack[0m
+[0;32mI (1530045) mqtt: mqtt published ack[0m
+[0;32mI (1531995) mqtt: mqtt published ack[0m
+[0;32mI (1534035) mqtt: mqtt published ack[0m
+[0;32mI (1535975) mqtt: mqtt published ack[0m
+[0;32mI (1538035) mqtt: mqtt published ack[0m
+[0;32mI (1539975) mqtt: mqtt published ack[0m
+[0;32mI (1542025) mqtt: mqtt published ack[0m
+[0;32mI (1544275) mqtt: mqtt published ack[0m
+[0;32mI (1546025) mqtt: mqtt published ack[0m
+[0;32mI (1547965) mqtt: mqtt published ack[0m
+[0;32mI (1550005) mqtt: mqtt published ack[0m
+[0;32mI (1551955) mqtt: mqtt published ack[0m
+[0;32mI (1554005) mqtt: mqtt published ack[0m
+[0;32mI (1556375) mqtt: mqtt published ack[0m
+[0;32mI (1557945) mqtt: mqtt published ack[0m
+[0;32mI (1559945) mqtt: mqtt published ack[0m
+[0;32mI (1562445) mqtt: mqtt published ack[0m
+[0;32mI (1563925) mqtt: mqtt published ack[0m
+[0;32mI (1565985) mqtt: mqtt published ack[0m
+[0;32mI (1568035) mqtt: mqtt published ack[0m
+[0;32mI (1569975) mqtt: mqtt published ack[0m
+[0;32mI (1572035) mqtt: mqtt published ack[0m
+[0;32mI (1574415) mqtt: mqtt published ack[0m
+[0;32mI (1576035) mqtt: mqtt published ack[0m
+[0;32mI (1577965) mqtt: mqtt published ack[0m
+[0;32mI (1580015) mqtt: mqtt published ack[0m
+[0;32mI (1581965) mqtt: mqtt published ack[0m
+[0;32mI (1584015) mqtt: mqtt published ack[0m
+[0;32mI (1586055) mqtt: mqtt published ack[0m
+[0;32mI (1588005) mqtt: mqtt published ack[0m
+[0;32mI (1590055) mqtt: mqtt published ack[0m
+[0;32mI (1591995) mqtt: mqtt published ack[0m
+[0;32mI (1594045) mqtt: mqtt published ack[0m
+[0;32mI (1596295) mqtt: mqtt published ack[0m
+[0;32mI (1598315) mqtt: mqtt published ack[0m
+[0;32mI (1599995) mqtt: mqtt published ack[0m
+[0;32mI (1602045) mqtt: mqtt published ack[0m
+[0;32mI (1603975) mqtt: mqtt published ack[0m
+[0;32mI (1606025) mqtt: mqtt published ack[0m
+[0;32mI (1607975) mqtt: mqtt published ack[0m
+[0;32mI (1610035) mqtt: mqtt published ack[0m
+[0;32mI (1612055) mqtt: mqtt published ack[0m
+[0;32mI (1614015) mqtt: mqtt published ack[0m
+[0;32mI (1615955) mqtt: mqtt published ack[0m
+[0;32mI (1618305) mqtt: mqtt published ack[0m
+[0;32mI (1619995) mqtt: mqtt published ack[0m
+[0;32mI (1622055) mqtt: mqtt published ack[0m
+[0;32mI (1623965) mqtt: mqtt published ack[0m
+[0;32mI (1625985) mqtt: mqtt published ack[0m
+[0;32mI (1627935) mqtt: mqtt published ack[0m
+[0;32mI (1629985) mqtt: mqtt published ack[0m
+[0;32mI (1632035) mqtt: mqtt published ack[0m
+[0;32mI (1634115) mqtt: mqtt published ack[0m
+[0;32mI (1636535) mqtt: mqtt published ack[0m
+[0;32mI (1637975) mqtt: mqtt published ack[0m
+[0;32mI (1640015) mqtt: mqtt published ack[0m
+[0;32mI (1641965) mqtt: mqtt published ack[0m
+[0;32mI (1644015) mqtt: mqtt published ack[0m
+[0;32mI (1645965) mqtt: mqtt published ack[0m
+[0;32mI (1648845) mqtt: mqtt published ack[0m
+[0;32mI (1650005) mqtt: mqtt published ack[0m
+[0;32mI (1652005) mqtt: mqtt published ack[0m
+[0;32mI (1653925) mqtt: mqtt published ack[0m
+[0;32mI (1655995) mqtt: mqtt published ack[0m
+[0;32mI (1657935) mqtt: mqtt published ack[0m
+[0;32mI (1660295) mqtt: mqtt published ack[0m
+[0;32mI (1661935) mqtt: mqtt published ack[0m
+[0;32mI (1664015) mqtt: mqtt published ack[0m
+[0;32mI (1666235) mqtt: mqtt published ack[0m
+[0;32mI (1667935) mqtt: mqtt published ack[0m
+[0;32mI (1670335) mqtt: mqtt published ack[0m
+[0;32mI (1672275) mqtt: mqtt published ack[0m
+[0;32mI (1674025) mqtt: mqtt published ack[0m
+[0;32mI (1675975) mqtt: mqtt published ack[0m
+[0;32mI (1678025) mqtt: mqtt published ack[0m
+[0;32mI (1679915) mqtt: mqtt published ack[0m
+[0;32mI (1682005) mqtt: mqtt published ack[0m
+[0;32mI (1683945) mqtt: mqtt published ack[0m
+[0;32mI (1685995) mqtt: mqtt published ack[0m
+[0;32mI (1687945) mqtt: mqtt published ack[0m
+[0;32mI (1689985) mqtt: mqtt published ack[0m
+[0;32mI (1691985) mqtt: mqtt published ack[0m
+[0;32mI (1693985) mqtt: mqtt published ack[0m
+[0;32mI (1695925) mqtt: mqtt published ack[0m
+[0;32mI (1697975) mqtt: mqtt published ack[0m
+[0;32mI (1700035) mqtt: mqtt published ack[0m
+[0;32mI (1702015) mqtt: mqtt published ack[0m
+[0;32mI (1704015) mqtt: mqtt published ack[0m
+[0;32mI (1705965) mqtt: mqtt published ack[0m
+[0;32mI (1708025) mqtt: mqtt published ack[0m
+[0;32mI (1709955) mqtt: mqtt published ack[0m
+[0;32mI (1712065) mqtt: mqtt published ack[0m
+[0;32mI (1714065) mqtt: mqtt published ack[0m
+[0;32mI (1715995) mqtt: mqtt published ack[0m
+[0;32mI (1717945) mqtt: mqtt published ack[0m
+[0;32mI (1719965) mqtt: mqtt published ack[0m
+[0;32mI (1721945) mqtt: mqtt published ack[0m
+[0;32mI (1723995) mqtt: mqtt published ack[0m
+[0;32mI (1725935) mqtt: mqtt published ack[0m
+[0;32mI (1728105) mqtt: mqtt published ack[0m
+[0;32mI (1730025) mqtt: mqtt published ack[0m
+[0;32mI (1732285) mqtt: mqtt published ack[0m
+[0;32mI (1734025) mqtt: mqtt published ack[0m
+[0;32mI (1735975) mqtt: mqtt published ack[0m
+[0;32mI (1738225) mqtt: mqtt published ack[0m
+[0;32mI (1739965) mqtt: mqtt published ack[0m
+[0;32mI (1741925) mqtt: mqtt published ack[0m
+[0;32mI (1743955) mqtt: mqtt published ack[0m
+[0;32mI (1746005) mqtt: mqtt published ack[0m
+[0;32mI (1747945) mqtt: mqtt published ack[0m
+[0;32mI (1749995) mqtt: mqtt published ack[0m
+[0;32mI (1752045) mqtt: mqtt published ack[0m
+[0;32mI (1754305) mqtt: mqtt published ack[0m
+[0;32mI (1756045) mqtt: mqtt published ack[0m
+[0;32mI (1757985) mqtt: mqtt published ack[0m
+[0;32mI (1760035) mqtt: mqtt published ack[0m
+[0;32mI (1761975) mqtt: mqtt published ack[0m
+[0;32mI (1764335) mqtt: mqtt published ack[0m
+[0;32mI (1765975) mqtt: mqtt published ack[0m
+[0;32mI (1768015) mqtt: mqtt published ack[0m
+[0;32mI (1769965) mqtt: mqtt published ack[0m
+[0;32mI (1772015) mqtt: mqtt published ack[0m
+[0;32mI (1774015) mqtt: mqtt published ack[0m
+[0;32mI (1775925) mqtt: mqtt published ack[0m
+[0;32mI (1778265) mqtt: mqtt published ack[0m
+[0;32mI (1779995) mqtt: mqtt published ack[0m
+[0;32mI (1782255) mqtt: mqtt published ack[0m
+[0;32mI (1783995) mqtt: mqtt published ack[0m
+[0;32mI (1785935) mqtt: mqtt published ack[0m
+[0;32mI (1787985) mqtt: mqtt published ack[0m
+[0;32mI (1790345) mqtt: mqtt published ack[0m
+[0;32mI (1791985) mqtt: mqtt published ack[0m
+[0;32mI (1794195) mqtt: mqtt published ack[0m
+[0;32mI (1795975) mqtt: mqtt published ack[0m
+[0;32mI (1798025) mqtt: mqtt published ack[0m
+[0;32mI (1799965) mqtt: mqtt published ack[0m
+[0;32mI (1802115) mqtt: mqtt published ack[0m
+[0;32mI (1803965) mqtt: mqtt published ack[0m
+[0;32mI (1806025) mqtt: mqtt published ack[0m
+[0;32mI (1807955) mqtt: mqtt published ack[0m
+[0;32mI (1810005) mqtt: mqtt published ack[0m
+[0;32mI (1812365) mqtt: mqtt published ack[0m
+[0;32mI (1814215) mqtt: mqtt published ack[0m
+[0;32mI (1815945) mqtt: mqtt published ack[0m
+[0;32mI (1817995) mqtt: mqtt published ack[0m
+[0;32mI (1820045) mqtt: mqtt published ack[0m
+[0;32mI (1821925) mqtt: mqtt published ack[0m
+[0;32mI (1823935) mqtt: mqtt published ack[0m
+[0;32mI (1825985) mqtt: mqtt published ack[0m
+[0;32mI (1828025) mqtt: mqtt published ack[0m
+[0;32mI (1829975) mqtt: mqtt published ack[0m
+[0;32mI (1832025) mqtt: mqtt published ack[0m
+[0;32mI (1834065) mqtt: mqtt published ack[0m
+[0;32mI (1836085) mqtt: mqtt published ack[0m
+[0;32mI (1838265) mqtt: mqtt published ack[0m
+[0;32mI (1840015) mqtt: mqtt published ack[0m
+[0;32mI (1841955) mqtt: mqtt published ack[0m
+[0;32mI (1844315) mqtt: mqtt published ack[0m
+[0;32mI (1845945) mqtt: mqtt published ack[0m
+[0;32mI (1847995) mqtt: mqtt published ack[0m
+[0;32mI (1850005) mqtt: mqtt published ack[0m
+[0;32mI (1851985) mqtt: mqtt published ack[0m
+[0;32mI (1854035) mqtt: mqtt published ack[0m
+[0;32mI (1856005) mqtt: mqtt published ack[0m
+[0;32mI (1858035) mqtt: mqtt published ack[0m
+[0;32mI (1859975) mqtt: mqtt published ack[0m
+[0;32mI (1862025) mqtt: mqtt published ack[0m
+[0;32mI (1864075) mqtt: mqtt published ack[0m
+[0;32mI (1866075) mqtt: mqtt published ack[0m
+[0;32mI (1867965) mqtt: mqtt published ack[0m
+[0;32mI (1870015) mqtt: mqtt published ack[0m
+[0;32mI (1871955) mqtt: mqtt published ack[0m
+[0;32mI (1874205) mqtt: mqtt published ack[0m
+[0;32mI (1876055) mqtt: mqtt published ack[0m
+[0;32mI (1878005) mqtt: mqtt published ack[0m
+[0;32mI (1879955) mqtt: mqtt published ack[0m
+[0;32mI (1882095) mqtt: mqtt published ack[0m
+[0;32mI (1884025) mqtt: mqtt published ack[0m
+[0;32mI (1885995) mqtt: mqtt published ack[0m
+[0;32mI (1888025) mqtt: mqtt published ack[0m
+[0;32mI (1890045) mqtt: mqtt published ack[0m
+[0;32mI (1892035) mqtt: mqtt published ack[0m
+[0;32mI (1894075) mqtt: mqtt published ack[0m
+[0;32mI (1896025) mqtt: mqtt published ack[0m
+[0;32mI (1898015) mqtt: mqtt published ack[0m
+[0;32mI (1900035) mqtt: mqtt published ack[0m
+[0;32mI (1902045) mqtt: mqtt published ack[0m
+[0;32mI (1903935) mqtt: mqtt published ack[0m
+[0;32mI (1905965) mqtt: mqtt published ack[0m
+[0;32mI (1908305) mqtt: mqtt published ack[0m
+[0;32mI (1909965) mqtt: mqtt published ack[0m
+[0;32mI (1911995) mqtt: mqtt published ack[0m
+[0;32mI (1914095) mqtt: mqtt published ack[0m
+[0;32mI (1916055) mqtt: mqtt published ack[0m
+[0;32mI (1918035) mqtt: mqtt published ack[0m
+[0;32mI (1919995) mqtt: mqtt published ack[0m
+[0;32mI (1922335) mqtt: mqtt published ack[0m
+[0;32mI (1924075) mqtt: mqtt published ack[0m
+[0;32mI (1926035) mqtt: mqtt published ack[0m
+[0;32mI (1928025) mqtt: mqtt published ack[0m
+[0;32mI (1930045) mqtt: mqtt published ack[0m
+[0;32mI (1931965) mqtt: mqtt published ack[0m
+[0;32mI (1934145) mqtt: mqtt published ack[0m
+[0;32mI (1936055) mqtt: mqtt published ack[0m
+[0;32mI (1938015) mqtt: mqtt published ack[0m
+[0;32mI (1940065) mqtt: mqtt published ack[0m
+[0;32mI (1942025) mqtt: mqtt published ack[0m
+[0;32mI (1944055) mqtt: mqtt published ack[0m
+[0;32mI (1946025) mqtt: mqtt published ack[0m
+[0;32mI (1948045) mqtt: mqtt published ack[0m
+[0;32mI (1949995) mqtt: mqtt published ack[0m
+[0;32mI (1952045) mqtt: mqtt published ack[0m
+[0;32mI (1954285) mqtt: mqtt published ack[0m
+[0;32mI (1956235) mqtt: mqtt published ack[0m
+[0;32mI (1957995) mqtt: mqtt published ack[0m
+[0;32mI (1960035) mqtt: mqtt published ack[0m
+[0;32mI (1962005) mqtt: mqtt published ack[0m
+[0;32mI (1964035) mqtt: mqtt published ack[0m
+[0;32mI (1966065) mqtt: mqtt published ack[0m
+[0;32mI (1968115) mqtt: mqtt published ack[0m
+[0;32mI (1969975) mqtt: mqtt published ack[0m
+[0;32mI (1972025) mqtt: mqtt published ack[0m
+[0;32mI (1974055) mqtt: mqtt published ack[0m
+[0;32mI (1976095) mqtt: mqtt published ack[0m
+[0;32mI (1978045) mqtt: mqtt published ack[0m
+[0;32mI (1979995) mqtt: mqtt published ack[0m
+[0;32mI (1982055) mqtt: mqtt published ack[0m
+[0;32mI (1984015) mqtt: mqtt published ack[0m
+[0;32mI (1986025) mqtt: mqtt published ack[0m
+[0;32mI (1988025) mqtt: mqtt published ack[0m
+[0;32mI (1990225) mqtt: mqtt published ack[0m
+[0;32mI (1992075) mqtt: mqtt published ack[0m
+[0;32mI (1994045) mqtt: mqtt published ack[0m
+[0;32mI (1996615) mqtt: mqtt published ack[0m
+[0;32mI (1998335) mqtt: mqtt published ack[0m
+[0;32mI (1999965) mqtt: mqtt published ack[0m
+[0;32mI (2002015) mqtt: mqtt published ack[0m
+[0;32mI (2004055) mqtt: mqtt published ack[0m
+[0;32mI (2006305) mqtt: mqtt published ack[0m
+[0;32mI (2008035) mqtt: mqtt published ack[0m
+[0;32mI (2010055) mqtt: mqtt published ack[0m
+[0;32mI (2012255) mqtt: mqtt published ack[0m
+[0;32mI (2014295) mqtt: mqtt published ack[0m
+[0;32mI (2016025) mqtt: mqtt published ack[0m
+[0;32mI (2018095) mqtt: mqtt published ack[0m
+[0;32mI (2020115) mqtt: mqtt published ack[0m
+[0;32mI (2021985) mqtt: mqtt published ack[0m
+[0;32mI (2024025) mqtt: mqtt published ack[0m
+[0;32mI (2026275) mqtt: mqtt published ack[0m
+[0;32mI (2028065) mqtt: mqtt published ack[0m
+[0;32mI (2030025) mqtt: mqtt published ack[0m
+[0;32mI (2032035) mqtt: mqtt published ack[0m
+[0;32mI (2034275) mqtt: mqtt published ack[0m
+[0;32mI (2036005) mqtt: mqtt published ack[0m
+[0;32mI (2038045) mqtt: mqtt published ack[0m
+[0;32mI (2039995) mqtt: mqtt published ack[0m
+[0;32mI (2042055) mqtt: mqtt published ack[0m
+[0;32mI (2044015) mqtt: mqtt published ack[0m
+[0;32mI (2046055) mqtt: mqtt published ack[0m
+[0;32mI (2048305) mqtt: mqtt published ack[0m
+[0;32mI (2050035) mqtt: mqtt published ack[0m
+[0;32mI (2052025) mqtt: mqtt published ack[0m
+[0;32mI (2054335) mqtt: mqtt published ack[0m
+[0;32mI (2055925) mqtt: mqtt published ack[0m
+[0;32mI (2058135) mqtt: mqtt published ack[0m
+[0;32mI (2060065) mqtt: mqtt published ack[0m
+[0;32mI (2062655) mqtt: mqtt published ack[0m
+[0;32mI (2064075) mqtt: mqtt published ack[0m
+[0;32mI (2066095) mqtt: mqtt published ack[0m
+[0;32mI (2068045) mqtt: mqtt published ack[0m
+[0;32mI (2070055) mqtt: mqtt published ack[0m
+[0;32mI (2072045) mqtt: mqtt published ack[0m
+[0;32mI (2074185) mqtt: mqtt published ack[0m
+[0;32mI (2076065) mqtt: mqtt published ack[0m
+[0;32mI (2078035) mqtt: mqtt published ack[0m
+[0;32mI (2080025) mqtt: mqtt published ack[0m
+[0;32mI (2082075) mqtt: mqtt published ack[0m
+[0;32mI (2084085) mqtt: mqtt published ack[0m
+[0;32mI (2086065) mqtt: mqtt published ack[0m
+[0;32mI (2088035) mqtt: mqtt published ack[0m
+[0;32mI (2090065) mqtt: mqtt published ack[0m
+[0;32mI (2092025) mqtt: mqtt published ack[0m
+[0;32mI (2094185) mqtt: mqtt published ack[0m
+[0;32mI (2096035) mqtt: mqtt published ack[0m
+[0;32mI (2098045) mqtt: mqtt published ack[0m
+[0;32mI (2100115) mqtt: mqtt published ack[0m
+[0;32mI (2102055) mqtt: mqtt published ack[0m
+[0;32mI (2103965) mqtt: mqtt published ack[0m
+[0;32mI (2106035) mqtt: mqtt published ack[0m
+[0;32mI (2108085) mqtt: mqtt published ack[0m
+[0;32mI (2110025) mqtt: mqtt published ack[0m
+[0;32mI (2112075) mqtt: mqtt published ack[0m
+[0;32mI (2114095) mqtt: mqtt published ack[0m
+[0;32mI (2116075) mqtt: mqtt published ack[0m
+[0;32mI (2118095) mqtt: mqtt published ack[0m
+[0;32mI (2120125) mqtt: mqtt published ack[0m
+[0;32mI (2122035) mqtt: mqtt published ack[0m
+[0;32mI (2124055) mqtt: mqtt published ack[0m
+[0;32mI (2126125) mqtt: mqtt published ack[0m
+[0;32mI (2128055) mqtt: mqtt published ack[0m
+[0;32mI (2130125) mqtt: mqtt published ack[0m
+[0;32mI (2132045) mqtt: mqtt published ack[0m
+[0;32mI (2134165) mqtt: mqtt published ack[0m
+[0;32mI (2135985) mqtt: mqtt published ack[0m
+[0;32mI (2138215) mqtt: mqtt published ack[0m
+[0;32mI (2140045) mqtt: mqtt published ack[0m
+[0;32mI (2142215) mqtt: mqtt published ack[0m
+[0;32mI (2143935) mqtt: mqtt published ack[0m
+[0;32mI (2146065) mqtt: mqtt published ack[0m
+[0;32mI (2147955) mqtt: mqtt published ack[0m
+[0;32mI (2150075) mqtt: mqtt published ack[0m
+[0;32mI (2152095) mqtt: mqtt published ack[0m
+[0;32mI (2153985) mqtt: mqtt published ack[0m
+[0;32mI (2156115) mqtt: mqtt published ack[0m
+[0;32mI (2158275) mqtt: mqtt published ack[0m
+[0;32mI (2160325) mqtt: mqtt published ack[0m
+[0;32mI (2162015) mqtt: mqtt published ack[0m
+[0;32mI (2164025) mqtt: mqtt published ack[0m
+[0;32mI (2166035) mqtt: mqtt published ack[0m
+[0;32mI (2168045) mqtt: mqtt published ack[0m
+[0;32mI (2170035) mqtt: mqtt published ack[0m
+[0;32mI (2172055) mqtt: mqtt published ack[0m
+[0;32mI (2174065) mqtt: mqtt published ack[0m
+[0;32mI (2176065) mqtt: mqtt published ack[0m
+[0;32mI (2178025) mqtt: mqtt published ack[0m
+[0;32mI (2180085) mqtt: mqtt published ack[0m
+[0;32mI (2182095) mqtt: mqtt published ack[0m
+[0;32mI (2184105) mqtt: mqtt published ack[0m
+[0;32mI (2186115) mqtt: mqtt published ack[0m
+[0;32mI (2188055) mqtt: mqtt published ack[0m
+[0;32mI (2190105) mqtt: mqtt published ack[0m
+[0;32mI (2192055) mqtt: mqtt published ack[0m
+[0;32mI (2194105) mqtt: mqtt published ack[0m
+[0;32mI (2196045) mqtt: mqtt published ack[0m
+[0;32mI (2198095) mqtt: mqtt published ack[0m
+[0;32mI (2199995) mqtt: mqtt published ack[0m
+[0;32mI (2202085) mqtt: mqtt published ack[0m
+[0;32mI (2203955) mqtt: mqtt published ack[0m
+[0;32mI (2206085) mqtt: mqtt published ack[0m
+[0;32mI (2207945) mqtt: mqtt published ack[0m
+[0;32mI (2210035) mqtt: mqtt published ack[0m
+[0;32mI (2212125) mqtt: mqtt published ack[0m
+[0;32mI (2214295) mqtt: mqtt published ack[0m
+[0;32mI (2216115) mqtt: mqtt published ack[0m
+[0;32mI (2218065) mqtt: mqtt published ack[0m
+[0;32mI (2220105) mqtt: mqtt published ack[0m
+[0;32mI (2222055) mqtt: mqtt published ack[0m
+[0;32mI (2223925) mqtt: mqtt published ack[0m
+[0;32mI (2225965) mqtt: mqtt published ack[0m
+[0;32mI (2228115) mqtt: mqtt published ack[0m
+[0;32mI (2229955) mqtt: mqtt published ack[0m
+[0;32mI (2232095) mqtt: mqtt published ack[0m
+[0;32mI (2233965) mqtt: mqtt published ack[0m
+[0;32mI (2236085) mqtt: mqtt published ack[0m
+[0;32mI (2237975) mqtt: mqtt published ack[0m
+[0;32mI (2240075) mqtt: mqtt published ack[0m
+[0;32mI (2242125) mqtt: mqtt published ack[0m
+[0;32mI (2244055) mqtt: mqtt published ack[0m
+[0;32mI (2246125) mqtt: mqtt published ack[0m

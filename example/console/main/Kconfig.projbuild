@@ -1,0 +1,27 @@
+# 定义一个名为 "Example Configuration" 的配置菜单（在 menuconfig 中会作为一个选项卡显示）
+# 所有后续配置项都会包含在这个菜单下，直到 endmenu 结束
+menu "Example Configuration"
+
+    # 定义第一个配置项：是否在 Flash 中存储命令历史
+    # "config" 是关键字，后面跟配置项名称（CONSOLE_STORE_HISTORY）
+    config CONSOLE_STORE_HISTORY
+        bool "Store command history in flash"  # 配置项类型为 bool（布尔值，复选框），显示名称为"在 Flash 中存储命令历史"
+        default y                              # 默认值为 y（yes，启用），即默认勾选此选项
+        help                                   # 帮助说明（用户按 ? 键时显示）
+            Linenoise line editing library provides functions to save and load
+            command history. If this option is enabled, initalizes a FAT filesystem
+            and uses it to store command history.
+            # 中文含义：Linenoise 行编辑库提供了保存和加载命令历史的功能。
+            # 若启用此选项，会初始化 FAT 文件系统，并用于存储命令历史（重启后不丢失）。
+
+    # 定义第二个配置项：最大命令行长度
+    config CONSOLE_MAX_COMMAND_LINE_LENGTH
+        int "Maximum command line length"      # 配置项类型为 int（整数），显示名称为"最大命令行长度"
+        default 1024                           # 默认值为 1024（单位：字符）
+        help                                   # 帮助说明
+            This value marks the maximum length of a single command line. Once it is
+            reached, no more characters will be accepted by the console.
+            # 中文含义：此值表示单个命令行的最大长度。达到该长度后，控制台将不再接受更多字符。
+
+# 标志 "Example Configuration" 菜单定义结束
+endmenu

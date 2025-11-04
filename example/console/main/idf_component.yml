@@ -1,0 +1,7 @@
+dependencies:  # 固定关键字：表示“工程依赖的组件列表”
+  cmd_system:   # 组件名：自定义的组件标识（需和组件目录名一致）
+    path: ${IDF_PATH}/examples/system/console/advanced/components/cmd_system  # 组件路径：告诉编译器去哪里找这个组件的源代码
+  cmd_nvs:      # 第二个依赖组件：NVS 命令相关代码
+    path: ${IDF_PATH}/examples/system/console/advanced/components/cmd_nvs
+  cmd_wifi:     # 第三个依赖组件：WiFi 命令相关代码
+    path: ${IDF_PATH}/examples/system/console/advanced/components/cmd_wifi

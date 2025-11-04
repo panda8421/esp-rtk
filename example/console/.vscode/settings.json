@@ -1,0 +1,8 @@
+{
+    "idf.pythonInstallPath": "/home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python",
+    "files.associations": {
+        "nvs_flash.h": "c",
+        "cmd_wifi.h": "c",
+        "cmd_system.h": "c"
+    }
+}

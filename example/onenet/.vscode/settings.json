@@ -1,0 +1,13 @@
+{
+    "idf.pythonInstallPath": "/home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python",
+    "files.associations": {
+        "onenet_mqtt.h": "c",
+        "esp_err.h": "c",
+        "stdio.h": "c",
+        "nvs_flash.h": "c",
+        "wifi_manager.h": "c",
+        "task.h": "c",
+        "cjson.h": "c",
+        "onenet_dm.h": "c"
+    }
+}

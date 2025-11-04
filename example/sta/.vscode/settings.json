@@ -1,0 +1,9 @@
+{
+    "idf.pythonInstallPath": "/home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python",
+    "files.associations": {
+        "stdio.h": "c",
+        "nvs_flash.h": "c",
+        "task.h": "c",
+        "freertos.h": "c"
+    }
+}

@@ -1,0 +1,2 @@
+source /home/panda/esp32_rtk/example/console/build/bootloader/gdbinit/symbols
+source /home/panda/esp32_rtk/example/console/build/bootloader/gdbinit/connect

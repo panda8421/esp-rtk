@@ -1,0 +1,78 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/panda/sta/build/bootloader/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/panda/sta/build/bootloader/bootloader.bin
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/sta.c.obj
+[3/8] Linking C static library esp-idf/main/libmain.a
+[4/8] Generating ld/sections.ld
+[5/8] Linking CXX executable sta.elf
+[6/8] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32c3 image...
+Merged 2 ELF sections
+Successfully created esp32c3 image.
+Generated /home/panda/sta/build/sta.bin
+[7/8] cd /home/panda/sta/build/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/panda/sta/build/partition_table/partition-table.bin /home/panda/sta/build/sta.bin
+sta.bin binary size 0xc2cd0 bytes. Smallest app partition is 0x100000 bytes. 0x3d330 bytes (24%) free.
+[7/8] cd /home/panda/esp32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/panda/esp32/esp-idf -D "SERIAL_TOOL=/home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python;;/home/panda/esp32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32c3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/panda/sta/build -P /home/panda/esp32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32c3 -p /dev/ttyACM0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 sta.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.10.0
+Serial port /dev/ttyACM0
+Connecting...
+Chip is ESP32-C3 (QFN32) (revision v0.4)
+Features: WiFi, BLE, Embedded Flash 4MB (XMC)
+Crystal is 40MHz
+USB mode: USB-Serial/JTAG
+MAC: 90:e5:b1:47:21:64
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x000d2fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 20848 bytes to 12749...
+Writing at 0x00000000... (100 %)
+Wrote 20848 bytes (12749 compressed) at 0x00000000 in 0.4 seconds (effective 457.3 kbit/s)...
+Hash of data verified.
+Compressed 797904 bytes to 467783...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001cc2f... (6 %)
+Writing at 0x00024868... (10 %)
+Writing at 0x000296f1... (13 %)
+Writing at 0x000329d8... (17 %)
+Writing at 0x00038e5a... (20 %)
+Writing at 0x0003fce2... (24 %)
+Writing at 0x00046ba7... (27 %)
+Writing at 0x0004e1d1... (31 %)
+Writing at 0x00054c82... (34 %)
+Writing at 0x0005bf24... (37 %)
+Writing at 0x00062d9e... (41 %)
+Writing at 0x00069f38... (44 %)
+Writing at 0x0007047d... (48 %)
+Writing at 0x000769f9... (51 %)
+Writing at 0x0007c886... (55 %)
+Writing at 0x00082afa... (58 %)
+Writing at 0x00088901... (62 %)
+Writing at 0x0008ecf7... (65 %)
+Writing at 0x0009513d... (68 %)
+Writing at 0x0009b2c9... (72 %)
+Writing at 0x000a17c4... (75 %)
+Writing at 0x000a786c... (79 %)
+Writing at 0x000addd2... (82 %)
+Writing at 0x000b48e2... (86 %)
+Writing at 0x000baa1b... (89 %)
+Writing at 0x000c092a... (93 %)
+Writing at 0x000c8626... (96 %)
+Writing at 0x000cf530... (100 %)
+Wrote 797904 bytes (467783 compressed) at 0x00010000 in 6.1 seconds (effective 1051.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 555.1 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

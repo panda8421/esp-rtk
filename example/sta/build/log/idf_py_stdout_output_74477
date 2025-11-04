@@ -1,0 +1,231 @@
+[0;32mI (113) esp_image: segment 1: paddr=00030070 vaddr=3fc910ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4005880e
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1738
+load:0x403cc710,len:0xb9c
+load:0x403ce710,len:0x2e40
+entry 0x403cc71a
+[0;32mI (24) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Oct 17 2025 14:42:15[0m
+[0;32mI (25) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c3: SPI Flash Size : 2MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (80) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=3c090020 size=20048h (131144) map[0m
+[0;32mI (113) esp_image: segment 1: paddr=00030070 vaddr=3fc91000 size=02b08h ( 11016) load[0m
+[0;32mI (116) esp_image: segment 2: paddr=00032b80 vaddr=40380000 size=0d498h ( 54424) load[0m
+[0;32mI (129) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=8f1e8h (586216) map[0m
+[0;32mI (221) esp_image: segment 4: paddr=000cf210 vaddr=4038d498 size=03a98h ( 15000) load[0m
+[0;32mI (229) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (230) boot: Disabling RNG early entropy source...[0m
+[0;32mI (241) cpu_start: Unicore app[0m
+[0;32mI (250) cpu_start: Pro cpu start user code[0m
+[0;32mI (250) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (250) cpu_start: Application information:[0m
+[0;32mI (253) cpu_start: Project name:     sta[0m
+[0;32mI (257) cpu_start: App version:      1[0m
+[0;32mI (262) cpu_start: Compile time:     Oct 17 2025 14:42:10[0m
+[0;32mI (268) cpu_start: ELF file SHA256:  026bce4d9...[0m
+[0;32mI (273) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (278) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (283) cpu_start: Max chip rev:     v1.99 [0m
+[0;32mI (288) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (292) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (300) heap_init: At 3FC97C80 len 00028380 (160 KiB): RAM[0m
+[0;32mI (306) heap_init: At 3FCC0000 len 0001C710 (113 KiB): Retention RAM[0m
+[0;32mI (313) heap_init: At 3FCDC710 len 00002950 (10 KiB): Retention RAM[0m
+[0;32mI (320) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (327) spi_flash: detected chip: generic[0m
+[0;32mI (331) spi_flash: flash io: dio[0m
+[0;33mW (334) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (348) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (354) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (362) main_task: Started on CPU0[0m
+[0;32mI (362) main_task: Calling app_main()[0m
+[0;32mI (372) pp: pp rom version: 9387209[0m
+[0;32mI (372) net80211: net80211 rom version: 9387209[0m
+[0;32mI (382) wifi:wifi driver task: 3fca07b0, prio:23, stack:6656, core=0[0m
+[0;32mI (382) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (382) wifi:wifi certification version: v7.0[0m
+[0;32mI (392) wifi:config NVS flash: enabled[0m
+[0;32mI (392) wifi:config nano formating: disabled[0m
+[0;32mI (392) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (402) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (402) wifi:Init management short buffer num: 32[0m
+[0;32mI (412) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (412) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (422) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (422) wifi:Init static rx buffer num: 10[0m
+[0;32mI (422) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (432) wifi_init: rx ba win: 6[0m
+[0;32mI (432) wifi_init: tcpip mbox: 32[0m
+[0;32mI (442) wifi_init: udp mbox: 6[0m
+[0;32mI (442) wifi_init: tcp mbox: 6[0m
+[0;32mI (442) wifi_init: tcp tx win: 5760[0m
+[0;32mI (452) wifi_init: tcp rx win: 5760[0m
+[0;32mI (452) wifi_init: tcp mss: 1440[0m
+[0;32mI (452) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (462) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (472) phy_init: phy_version 1130,b4e4b80,Sep  5 2023,11:09:30[0m
+[0;32mI (522) wifi:mode : sta (90:e5:b1:47:21:64)[0m
+[0;32mI (522) wifi:enable tsf[0m
+[0;32mI (532) main_task: Returned from app_main()[0m
+[0;32mI (532) wifi:new:<3,0>, old:<1,0>, ap:<255,255>, sta:<3,0>, prof:1[0m
+[0;32mI (542) wifi:state: init -> auth (b0)[0m
+[0;32mI (1542) wifi:state: auth -> init (200)[0m
+[0;32mI (1542) wifi:new:<3,0>, old:<3,0>, ap:<255,255>, sta:<3,0>, prof:1[0m
+[0;32mI (1542) sta: esp32 connect the ap faild! retry![0m
+[0;32mI (4942) sta: esp32 connect the ap faild! retry![0m
+[0;32mI (5942) wifi:new:<3,0>, old:<3,0>, ap:<255,255>, sta:<3,0>, prof:1[0m
+[0;32mI (5942) wifi:state: init -> auth (b0)[0m
+[0;32mI (5952) wifi:state: auth -> assoc (0)[0m
+[0;32mI (6002) wifi:state: assoc -> run (10)[0m
+[0;32mI (6032) wifi:connected with Xiaomi 14 Pro, aid = 6, channel 3, BW20, bssid = 06:01:65:4b:40:cf[0m
+[0;32mI (6032) wifi:security: WPA2-PSK, phy: bgn, rssi: -28[0m
+[0;32mI (6032) wifi:pm start, type: 1[0m
+
+[0;32mI (6032) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (6042) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (6052) sta: esp32 connected to ap![0m
+[0;32mI (6062) wifi:<ba-add>idx:0 (ifx:0, 06:01:65:4b:40:cf), tid:0, ssn:0, winSize:64[0m
+[0;32mI (6082) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (6082) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (7552) esp_netif_handlers: sta ip: 192.168.238.242, mask: 255.255.255.0, gw: 192.168.238.139[0m
+[0;32mI (7552) sta: esp32 get ip address[0m
+[0;32mI (8542) sta: Connected to phone server![0m
+[0;32mI (8542) sta: 发送数据: ESP32温度: 21℃
+[0m
+[0;32mI (10542) sta: 发送数据: ESP32温度: 19℃
+[0m
+[0;32mI (12542) sta: 发送数据: ESP32温度: 24℃
+[0m
+[0;32mI (14542) sta: 发送数据: ESP32温度: 30℃
+[0m
+[0;32mI (16542) sta: 发送数据: ESP32温度: 13℃
+[0m
+[0;32mI (18542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (20542) sta: 发送数据: ESP32温度: 11℃
+[0m
+[0;32mI (22542) sta: 发送数据: ESP32温度: 16℃
+[0m
+[0;32mI (24542) sta: 发送数据: ESP32温度: 12℃
+[0m
+[0;32mI (26542) sta: 发送数据: ESP32温度: 26℃
+[0m
+[0;32mI (28542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (30542) sta: 发送数据: ESP32温度: 21℃
+[0m
+[0;32mI (32542) sta: 发送数据: ESP32温度: 10℃
+[0m
+[0;32mI (34542) sta: 发送数据: ESP32温度: 21℃
+[0m
+[0;32mI (36542) sta: 发送数据: ESP32温度: 13℃
+[0m
+[0;32mI (38542) sta: 发送数据: ESP32温度: 18℃
+[0m
+[0;32mI (40542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (42542) sta: 发送数据: ESP32温度: 25℃
+[0m
+[0;32mI (44542) sta: 发送数据: ESP32温度: 15℃
+[0m
+[0;32mI (46542) sta: 发送数据: ESP32温度: 24℃
+[0m
+[0;32mI (48542) sta: 发送数据: ESP32温度: 26℃
+[0m
+[0;32mI (50542) sta: 发送数据: ESP32温度: 21℃
+[0m
+[0;32mI (52542) sta: 发送数据: ESP32温度: 12℃
+[0m
+[0;32mI (54542) sta: 发送数据: ESP32温度: 12℃
+[0m
+[0;32mI (56542) sta: 发送数据: ESP32温度: 14℃
+[0m
+[0;32mI (58542) sta: 发送数据: ESP32温度: 29℃
+[0m
+[0;32mI (60542) sta: 发送数据: ESP32温度: 28℃
+[0m
+[0;32mI (62542) sta: 发送数据: ESP32温度: 16℃
+[0m
+[0;32mI (64542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (66542) sta: 发送数据: ESP32温度: 17℃
+[0m
+[0;32mI (68542) sta: 发送数据: ESP32温度: 19℃
+[0m
+[0;32mI (70542) sta: 发送数据: ESP32温度: 18℃
+[0m
+[0;32mI (72542) sta: 发送数据: ESP32温度: 17℃
+[0m
+[0;32mI (74542) sta: 发送数据: ESP32温度: 13℃
+[0m
+[0;32mI (76542) sta: 发送数据: ESP32温度: 19℃
+[0m
+[0;32mI (78542) sta: 发送数据: ESP32温度: 21℃
+[0m
+[0;32mI (80542) sta: 发送数据: ESP32温度: 30℃
+[0m
+[0;32mI (82542) sta: 发送数据: ESP32温度: 27℃
+[0m
+[0;32mI (84542) sta: 发送数据: ESP32温度: 23℃
+[0m
+[0;32mI (86542) sta: 发送数据: ESP32温度: 15℃
+[0m
+[0;32mI (88542) sta: 发送数据: ESP32温度: 16℃
+[0m
+[0;32mI (90542) sta: 发送数据: ESP32温度: 19℃
+[0m
+[0;32mI (92542) sta: 发送数据: ESP32温度: 13℃
+[0m
+[0;32mI (94542) sta: 发送数据: ESP32温度: 28℃
+[0m
+[0;32mI (96542) sta: 发送数据: ESP32温度: 17℃
+[0m
+[0;32mI (98542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (100542) sta: 发送数据: ESP32温度: 16℃
+[0m
+[0;32mI (102542) sta: 发送数据: ESP32温度: 20℃
+[0m
+[0;32mI (104542) sta: 发送数据: ESP32温度: 23℃
+[0m
+[0;32mI (106542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (108542) sta: 发送数据: ESP32温度: 12℃
+[0m
+[0;32mI (110542) sta: 发送数据: ESP32温度: 25℃
+[0m
+[0;32mI (112542) sta: 发送数据: ESP32温度: 25℃
+[0m
+[0;32mI (114542) sta: 发送数据: ESP32温度: 20℃
+[0m
+[0;32mI (116542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (118542) sta: 发送数据: ESP32温度: 28℃
+[0m
+[0;32mI (120542) sta: 发送数据: ESP32温度: 19℃
+[0m
+[0;32mI (122542) sta: 发送数据: ESP32温度: 27℃
+[0m
+[0;32mI (124542) sta: 发送数据: ESP32温度: 22℃
+[0m
+[0;32mI (126542) sta: 发送数据: ESP32温度: 20℃
+[0m
+[0;32mI (128542) sta: 发送数据: ESP32温度: 28℃
+[0m
+[0;32mI (130542) sta: 发送数据: ESP32温度: 17℃
+[0m
+[0;32mI (132542) sta: 发送数据: ESP32温度: 12℃
+[0m

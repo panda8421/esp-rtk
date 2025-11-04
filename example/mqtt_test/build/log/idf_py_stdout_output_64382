@@ -1,0 +1,15 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/panda/mqtt_test/build/bootloader/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/panda/mqtt_test/build/bootloader/bootloader.bin
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/mqtt_test.c.obj
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable mqtt_test.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32c3 image...
+Merged 2 ELF sections
+Successfully created esp32c3 image.
+Generated /home/panda/mqtt_test/build/mqtt_test.bin
+[7/7] cd /home/panda/mqtt_test/build/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/panda/mqtt_test/build/partition_table/partition-table.bin /home/panda/mqtt_test/build/mqtt_test.bin
+mqtt_test.bin binary size 0xe33b0 bytes. Smallest app partition is 0x100000 bytes. 0x1cc50 bytes (11%) free.

@@ -1,0 +1,5 @@
+[1/4] cd /home/panda/sta/build/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/panda/sta/build/partition_table/partition-table.bin /home/panda/sta/build/sta.bin
+sta.bin binary size 0x2c7d0 bytes. Smallest app partition is 0x100000 bytes. 0xd3830 bytes (83%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/panda/sta/build/bootloader/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/panda/sta/build/bootloader/bootloader.bin
+Bootloader binary size 0x5170 bytes. 0x2e90 bytes (36%) free.

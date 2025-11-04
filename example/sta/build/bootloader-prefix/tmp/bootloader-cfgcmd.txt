@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DSDKCONFIG=/home/panda/sta/sdkconfig;-DIDF_PATH=/home/panda/esp32/esp-idf;-DIDF_TARGET=esp32c3;-DPYTHON_DEPS_CHECKED=1;-DPYTHON=/home/panda/.espressif/python_env/idf5.2_py3.8_env/bin/python;-DEXTRA_COMPONENT_DIRS=/home/panda/esp32/esp-idf/components/bootloader;-DPROJECT_SOURCE_DIR=/home/panda/sta;-DIGNORE_EXTRA_COMPONENT=;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'
