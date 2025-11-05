@@ -1,0 +1,2 @@
+source /home/panda/esp32_rtk/main_code/rtk_esp32c3_board/build/gdbinit/symbols
+source /home/panda/esp32_rtk/main_code/rtk_esp32c3_board/build/gdbinit/connect
