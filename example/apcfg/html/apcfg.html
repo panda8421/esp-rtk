@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设备配网</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .btn-scan {
+            background-color: #2196F3;
+            margin-bottom: 15px;
+        }
+        .btn-scan:hover {
+            background-color: #0b7dda;
+        }
+        .status {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            display: none;
+        }
+        .success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            display: block;
+        }
+        .error {
+            background-color: #f2dede;
+            color: #a94442;
+            display: block;
+        }
+        .loading {
+            text-align: center;
+            display: none;
+            margin-top: 20px;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .wifi-list {
+            margin-bottom: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .wifi-item {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        .wifi-item:hover {
+            background-color: #f5f5f5;
+        }
+        .wifi-item:last-child {
+            border-bottom: none;
+        }
+        .wifi-signal {
+            display: inline-block;
+            width: 60px;
+        }
+        .signal-strong {
+            color: #4CAF50;
+        }
+        .signal-medium {
+            color: #FFC107;
+        }
+        .signal-weak {
+            color: #F44336;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>设备网络配置</h1>
+        
+        <button id="scan-btn" class="btn-scan">扫描附近Wi-Fi网络</button>
+        
+        <div id="wifi-list-container" class="wifi-list hidden">
+            <h3>可用Wi-Fi网络</h3>
+            <div id="wifi-list"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="ssid">Wi-Fi网络名称 (SSID)</label>
+            <input type="text" id="ssid" placeholder="请输入或选择Wi-Fi名称">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Wi-Fi密码</label>
+            <input type="password" id="password" placeholder="请输入Wi-Fi密码">
+        </div>
+
+        <button id="submit-btn" class="btn-submit">配置网络</button>
+        
+        <div id="status" class="status"></div>
+        
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p id="loading-text">正在配置网络，请稍候...</p>
+        </div>
+    </div>
+
+    <script>
+		var gateway = `ws://${window.location.hostname}/ws`;
+        var websocket;
+		let scanTimeId;
+		console.log('script run');
+        window.addEventListener('load', onLoad);//		<--页面加载完毕,执行onLoad-->
+		
+		function onLoad(event) {
+            initWebSocket();
+        }
+		
+		function initWebSocket() {
+            console.log('Trying to open a WebSocket connection...');
+            websocket = new WebSocket(gateway);
+            websocket.onopen = onOpen;
+            websocket.onclose = onClose;
+            websocket.onmessage = onMessage; // <-- add this line
+        }
+		
+		function onOpen(event) {
+            console.log('Connection opened');
+        }
+        function onClose(event) {
+            console.log('Connection closed');
+            setTimeout(initWebSocket, 3000);
+        }
+        function onMessage(event) {
+            var state;
+			const data = JSON.parse(event.data);
+            console.log(event.data);
+			const wifiListContainer = document.getElementById('wifi-list-container');
+            const wifiList = document.getElementById('wifi-list');
+            const btn = document.getElementById('scan-btn');
+			clearTimeout(scanTimeId);
+			document.getElementById('scan-btn').textContent = '重新扫描Wi-Fi网络';
+            wifiListContainer.classList.remove('hidden');
+			for (let i = 0; i < data.wifi_list.length; i++) {
+				console.log(`ssid: ${data.wifi_list[i].ssid}, rssi: ${data.wifi_list[i].rssi},encrypted: ${data.wifi_list[i].encrypted}`);
+				
+				const item = document.createElement('div');
+				item.className = 'wifi-item';
+				item.innerHTML = `
+					<div>
+						<strong>${data.wifi_list[i].ssid}</strong>
+						<span class="wifi-signal ${getSignalStrengthClass(data.wifi_list[i].rssi)}">
+							${getSignalStrengthIcon(data.wifi_list[i].rssi)} ${data.wifi_list[i].rssi}dBm
+						</span>
+						${data.wifi_list[i].encrypted ? '🔒' : '🌐'}
+					</div>
+				`;
+				
+				item.addEventListener('click', () => {
+					document.getElementById('ssid').value = data.wifi_list[i].ssid;
+					document.getElementById('password').focus();
+				});
+				
+				wifiList.appendChild(item);
+			}
+            document.getElementById('loading').style.display = 'none';
+            btn.disabled = false;
+            showStatus('扫描完成','success');
+        }
+		
+        // 扫描Wi-Fi网络
+        document.getElementById('scan-btn').addEventListener('click', function() {
+            const btn = this;
+            const wifiListContainer = document.getElementById('wifi-list-container');
+            const wifiList = document.getElementById('wifi-list');
+            
+            btn.disabled = true;
+            btn.textContent = '正在扫描...';
+            document.getElementById('loading-text').textContent = '正在扫描Wi-Fi网络...';
+            document.getElementById('loading').style.display = 'block';
+            wifiList.innerHTML = '';
+			scanNetwork('start');
+			scanTimeId = setTimeout(() => {
+				btn.textContent = '重新扫描Wi-Fi网络';
+                btn.disabled = false;
+                document.getElementById('loading').style.display = 'none';
+                showStatus('扫描Wi-Fi网络失败，请稍后重试', 'error');
+                }, 20*1000);
+        });
+        
+        // 提交网络配置
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            const ssid = document.getElementById('ssid').value;
+            const password = document.getElementById('password').value;
+            
+            if (!ssid) {
+                showStatus('请输入Wi-Fi网络名称', 'error');
+                return;
+            }
+            
+            document.getElementById('loading-text').textContent = '正在配置网络，请稍候...';
+            document.getElementById('loading').style.display = 'block';
+            this.disabled = true;
+            
+            // 这里应该是实际的配网API调用
+            configureNetwork(ssid, password);
+        });
+        
+        // 模拟配置网络
+        function configureNetwork(ssid, password) {
+			const manualJson = '{"ssid":"' + ssid+ '","password":"' + password + '"}';
+			websocket.send(manualJson);
+			showStatus('开始配置网络！请留意设备信息...','success');
+        }
+        
+        // 开始扫描
+        function scanNetwork(msg) {
+			const manualJson = '{"scan":"' + msg+ '"}';
+			websocket.send(manualJson);
+			showStatus('开始扫描....','success');
+        } 
+
+        // 显示状态信息
+        function showStatus(message, type) {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = message;
+            statusElement.className = 'status ' + type;
+        }
+        
+        // 获取信号强度图标
+        function getSignalStrengthIcon(rssi) {
+            if (rssi >= -50) return '📶'; // 强信号
+            if (rssi >= -70) return '📶'; // 中等信号
+            return '📶'; // 弱信号
+        }
+        
+        // 获取信号强度CSS类
+        function getSignalStrengthClass(rssi) {
+            if (rssi >= -50) return 'signal-strong';
+            if (rssi >= -70) return 'signal-medium';
+            return 'signal-weak';
+        }
+    </script>
+</body>
+</html>

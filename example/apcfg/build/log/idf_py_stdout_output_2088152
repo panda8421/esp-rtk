@@ -1,0 +1,17 @@
+[1/11] cd /home/panda/esp32_rtk/example/apcfg/build/esp-idf/main && /home/panda/.espressif/python_env/idf5.3_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/spiffs/spiffsgen.py 0x4000 /home/panda/esp32_rtk/example/apcfg/html /home/panda/esp32_rtk/example/apcfg/build/html.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/11] Performing build step for 'bootloader'
+[1/1] cd /home/panda/esp32_rtk/example/apcfg/build/bootloader/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.3_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/panda/esp32_rtk/example/apcfg/build/bootloader/bootloader.bin
+Bootloader binary size 0x5360 bytes. 0x2ca0 bytes (35%) free.
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/apcfg.c.obj
+[4/9] Linking C static library esp-idf/main/libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Building C object CMakeFiles/apcfg.elf.dir/project_elf_src_esp32c3.c.obj
+[7/9] Linking CXX executable apcfg.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.10.0
+Creating esp32c3 image...
+Merged 1 ELF section
+Successfully created esp32c3 image.
+Generated /home/panda/esp32_rtk/example/apcfg/build/apcfg.bin
+[9/9] cd /home/panda/esp32_rtk/example/apcfg/build/esp-idf/esptool_py && /home/panda/.espressif/python_env/idf5.3_py3.8_env/bin/python /home/panda/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/panda/esp32_rtk/example/apcfg/build/partition_table/partition-table.bin /home/panda/esp32_rtk/example/apcfg/build/apcfg.bin
+apcfg.bin binary size 0xc3e10 bytes. Smallest app partition is 0x177000 bytes. 0xb31f0 bytes (48%) free.

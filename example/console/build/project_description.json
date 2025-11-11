@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "console",
-    "project_version":    "32168d8",
+    "project_version":    "2fbe55d-dirty",
     "project_path":       "/home/panda/esp32_rtk/example/console",
     "idf_path":           "/home/panda/esp32/esp-idf",
     "build_dir":          "/home/panda/esp32_rtk/example/console/build",
