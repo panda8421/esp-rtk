@@ -1,0 +1,2 @@
+source /home/panda/esp32_rtk/example/blufi/build/bootloader/gdbinit/symbols
+source /home/panda/esp32_rtk/example/blufi/build/bootloader/gdbinit/connect
